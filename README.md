@@ -34,7 +34,7 @@
 -----------------------------------------------------------
 - [Project Deployed Here!]()
 
-- [Project Repo Here!]()
+- [Project Repo Here!](https://github.com/KeeslingB/madlibs-gpt)
 
 
 ## License
