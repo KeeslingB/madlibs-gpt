@@ -4,14 +4,30 @@ const bcrypt = require("bcrypt")
 const userSchema = new Schema({
   email: {
     type: String,
-    required: true
+    required: true,
+    validate: {
+      validator: function (v) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+      },
+      message: 'Not a Valid Email!'
+    }
+
   },
   password: {
     type: String,
     required: true
-  }
+  },
+  story: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Story',
+    },
+  ],
 },{
-  timestamps: true
+  timestamps: true,
+  toJSON: {
+    virtuals: true
+  }
 },
 );
 
@@ -20,7 +36,6 @@ userSchema.pre("save", async function(next){
   next()
 })
 
-// test commit
 
 const User = model('User', userSchema);
 module.exports = User;
