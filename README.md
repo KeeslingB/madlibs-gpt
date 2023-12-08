@@ -17,7 +17,7 @@
 
 
 ## Credits
-
+ - [Medium Blog Post](https://blog.bitsrc.io/interacting-with-openai-in-node-js-and-express-647e771fc4ad) : Really helped with the starting logic and understanding of interacting with our openai api in Node.js and Express.
 
 ## Project Examples
 
@@ -41,4 +41,3 @@
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/c5fca045-7524-4737-97a5-0618fc38055d/deploy-status)](https://app.netlify.com/sites/spiffy-selkie-d1d31e/deploys)
