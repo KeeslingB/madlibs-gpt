@@ -17,7 +17,7 @@
 
 
 ## Credits
-
+ - [Medium Blog Post](https://blog.bitsrc.io/interacting-with-openai-in-node-js-and-express-647e771fc4ad) : Really helped with the starting logic and understanding of interacting with our openai api in Node.js and Express.
 
 ## Project Examples
 
