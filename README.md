@@ -32,7 +32,7 @@
 - [Brendan Keesling](https://github.com/KeeslingB)
 - [Molly Salzberger](https://github.com/mollydotwhat)
 -----------------------------------------------------------
-- [Project Deployed Here!]()
+- [Project Deployed Here!](https://madlibsgpt-47c520ae93df.herokuapp.com/)  placeholder url will need to be updated after final url name?
 
 - [Project Repo Here!](https://github.com/KeeslingB/madlibs-gpt)
 
@@ -41,4 +41,3 @@
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/c5fca045-7524-4737-97a5-0618fc38055d/deploy-status)](https://app.netlify.com/sites/spiffy-selkie-d1d31e/deploys)
