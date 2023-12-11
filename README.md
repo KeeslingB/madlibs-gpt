@@ -17,6 +17,8 @@
 
 
 ## Credits
+animejs documentation was very robust and had lots of resources / examples to go off of when implementing into our project.
+- [Animejs](https://animejs.com/documentation/)
 
 
 ## Project Examples
@@ -32,6 +34,8 @@
 - [Brendan Keesling](https://github.com/KeeslingB)
 - [Molly Salzberger](https://github.com/mollydotwhat)
 -----------------------------------------------------------
+
+
 - [Project Deployed Here!](https://madlibsgpt-47c520ae93df.herokuapp.com/)  placeholder url will need to be updated after final url name?
 
 - [Project Repo Here!](https://github.com/KeeslingB/madlibs-gpt)

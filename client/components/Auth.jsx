@@ -1,18 +1,21 @@
 import { useEffect, useState } from "react"
 import { useAppCtx } from "../utils/AppProvider"
+// import anime from 'animejs/lib/anime.es.js';
+import '../../assets/css/style.css';
+import Animejs from './Animejs';
+import basicTimeLine from './Animejs';
 
-
-export default function Auth({usage="signup"}){
+export default function Auth({ usage = "signup" }) {
 
   const appCtx = useAppCtx()
 
-  const [ userData, setUserData ] = useState({ email: "", password: "" })
+  const [userData, setUserData] = useState({ email: "", password: "" })
 
-  function handleInputChange(e){
-    setUserData({...userData, [e.target.name]: e.target.value })
+  function handleInputChange(e) {
+    setUserData({ ...userData, [e.target.name]: e.target.value })
   }
 
-  async function handleFormSubmit(e){
+  async function handleFormSubmit(e) {
     e.preventDefault()
     const apiPath = (usage === "signup") ? "/" : "/auth"
     const finalPath = `/api/user${apiPath}`
@@ -27,24 +30,24 @@ export default function Auth({usage="signup"}){
       })
       const response = await query.json()
       console.log(response)
-      if( response.result === "success" ){
+      if (response.result === "success") {
         window.location.href = "/"
       }
-    } catch(err){
+    } catch (err) {
       console.log(err.message)
     }
   }
 
   useEffect(() => {
-    setUserData({...userData, email: appCtx.user.email || "" })
-  },[appCtx])
+    setUserData({ ...userData, email: appCtx.user.email || "" })
+  }, [appCtx])
 
 
   return (
     <div>
       <form onSubmit={handleFormSubmit}>
         <div>
-          <h2>{ usage === "signup" ? "Signup" : "Login" }</h2>
+          <h2>{usage === "signup" ? "Signup" : "Login"}</h2>
           <div>
             <div>
               <label className="d-block">Email Address</label>
@@ -56,11 +59,15 @@ export default function Auth({usage="signup"}){
               <input type="password" name="password" value={userData.password} onChange={handleInputChange} />
             </div>
           </div>
+          <div className="button">
 
-          <button className="mt-2">Submit Info</button>
-        </div>
+          <button  className="mt-2 text">Submit Info</button>
+          <Animejs onClick={basicTimeLine}/>
+          </div>
+        </div> 
       </form>
     </div>
   )
-
 }
+
+
