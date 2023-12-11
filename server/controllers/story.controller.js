@@ -1,9 +1,9 @@
-const { Sample } = require('../models');
-const Model = Sample; 
+const { User } = require('../models');
+const Model = User; 
 
-async function getAllItems() {
+async function getAllItems(story) {
   try {
-    return await Model.find();
+    return await Model.find(story);
   } catch (err) {
     throw new Error(err)
   }
@@ -46,9 +46,9 @@ async function deleteItemById(id) {
 }
 
 module.exports = {
-  getAllSamples: getAllItems,
-  getSampleById: getItemById,
-  createSample: createItem,
-  updateSampleById: updateItemById,
-  deleteSampleById: deleteItemById
+  getAllStorys: getAllItems,
+  getStoryById: getItemById,
+  createStory: createItem,
+  updateStoryById: updateItemById,
+  deleteStoryById: deleteItemById
 }
