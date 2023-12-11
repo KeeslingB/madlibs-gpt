@@ -1,6 +1,5 @@
 const { Schema, model } = require('mongoose');
 const storySchema = require('./Story')
-const commentSchema = require('./Comment')
 const bcrypt = require("bcrypt")
 
 const userSchema = new Schema({
@@ -20,7 +19,6 @@ const userSchema = new Schema({
     required: true
   },
   story: [storySchema],
-  comment: [commentSchema]
 }, {
   toJSON: {
     virtuals: true,

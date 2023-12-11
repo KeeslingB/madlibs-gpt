@@ -1,4 +1,16 @@
 const { Schema, Types } = require('mongoose');
+const Comment = require('./Comment')
+
+const commentSchema = new Schema({
+  user: {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+  },
+  commentText: {
+      type: String,
+      required: true
+  }
+})
 
 const storySchema = new Schema(
   {
@@ -18,6 +30,7 @@ const storySchema = new Schema(
       type: Date,
       default: Date.now,
     },
+    comments: [commentSchema]
   },
   {
     toJSON: {
