@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-const storySchema = require('./Story')
 const bcrypt = require("bcrypt")
 
 const userSchema = new Schema({
@@ -18,7 +17,12 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  story: [storySchema],
+  story: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Story',
+    }
+  ],
 }, {
   toJSON: {
     virtuals: true,

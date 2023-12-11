@@ -5,46 +5,6 @@ require("dotenv").config();
 
 const Model = User; 
 
-  async function addStory(req, res) {
-    try {
-      const user = await Model.findOneAndUpdate(
-        { _id: req.params.id },
-        { $addToSet: { story: req.body } },
-        { runValidators: true, new: true }
-      );
-
-      if (!user) {
-        return res
-          .status(404)
-          .json({ message: 'No user found with that ID' });
-      }
-
-      res.json(user);
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  }
-
-  async function deleteStory(req, res) {
-    try {
-      const user = await Model.findOneAndUpdate(
-        { _id: req.params.id },
-        { $pull: { story: { storyId: req.params.storyId } } },
-        { runValidators: true, new: true }
-      );
-
-      if (!user) {
-        return res
-          .status(404)
-          .json({ message: 'No user found with that ID' });
-      }
-
-      res.json(user);
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  }
-
   async function verifyUser(req){
     const cookie = req.cookies["auth-cookie"]
     if( !cookie ) return false 
@@ -130,6 +90,58 @@ async function deleteItemById(id) {
   }
 }
 
+async function addStory(req, res) {
+  try {
+    const user = await Model.findOneAndUpdate(
+      { _id: req.params.id },
+      { $addToSet: { story: req.body } },
+      { runValidators: true, new: true }
+    );
+
+    if (!user) {
+      return res
+        .status(404)
+        .json({ message: 'No user found with that ID' });
+    }
+
+    res.json(user);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+}
+
+async function deleteStory(req, res) {
+  try {
+    const user = await Model.findOneAndUpdate(
+      { _id: req.params.id },
+      { $pull: { story: { storyId: req.params.storyId } } },
+      { runValidators: true, new: true }
+    );
+
+    if (!user) {
+      return res
+        .status(404)
+        .json({ message: 'No user found with that ID' });
+    }
+
+    res.json(user);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+}
+
+  async function getStory(req, res) {
+  try {
+    const story = await User.find(
+      {story: {$elemMatch: {storyid: req.params.storyID}}} 
+      );
+    res.json(story);
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json(err);
+  }
+}
+
 module.exports = {
   getAllUsers: getAllItems,
   getUserById: getItemById,
@@ -139,5 +151,6 @@ module.exports = {
   authenticate,
   verifyUser,
   addStory,
-  deleteStory
+  deleteStory,
+  getStory
 }
