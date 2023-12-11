@@ -1,17 +1,31 @@
-const { Schema, model } = require('mongoose');
+const { Schema, Types } = require('mongoose');
 
-const storySchema = new Schema({
-  story: {
-    type: String,
-    required: true,
-  },
-  answers: [
-    {
+const storySchema = new Schema(
+  {
+    storyId: {
       type: Schema.Types.ObjectId,
-      ref: 'Answer',
+      default: () => new Types.ObjectId(),
     },
-  ],
-});
+    title: {
+      type: String,
+      required: true,
+    },
+    story: {
+      type: String,
+      required: true,
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+    },
+  },
+  {
+    toJSON: {
+      getters: true,
+    },
+    id: false,
+  }
+);
 
-const Story = model('Story', storySchema);
-module.exports = Story;
+
+module.exports = storySchema;
