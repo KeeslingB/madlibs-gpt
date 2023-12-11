@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const storySchema = require('./Story')
+const commentSchema = require('./Comment')
 const bcrypt = require("bcrypt")
 
 const userSchema = new Schema({
@@ -18,8 +19,9 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  story: [ storySchema ],
-},{
+  story: [storySchema],
+  comment: [commentSchema]
+}, {
   toJSON: {
     virtuals: true,
   },
@@ -27,7 +29,7 @@ const userSchema = new Schema({
 },
 );
 
-userSchema.pre("save", async function(next){
+userSchema.pre("save", async function (next) {
   this.password = await bcrypt.hash(this.password, 10)
   next()
 })
