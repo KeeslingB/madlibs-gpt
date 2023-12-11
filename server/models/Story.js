@@ -1,23 +1,9 @@
-const { Schema, Types } = require('mongoose');
-const Comment = require('./Comment')
+const { Schema, model } = require('mongoose');
+const commentSchema = require('./Comment');
 
-const commentSchema = new Schema({
-  user: {
-      type: Schema.Types.ObjectId,
-      ref: 'User'
-  },
-  commentText: {
-      type: String,
-      required: true
-  }
-})
 
 const storySchema = new Schema(
   {
-    storyId: {
-      type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId(),
-    },
     title: {
       type: String,
       required: true,
@@ -30,7 +16,12 @@ const storySchema = new Schema(
       type: Date,
       default: Date.now,
     },
-    comments: [commentSchema]
+    comments: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Comment',
+      }
+    ],
   },
   {
     toJSON: {
@@ -40,5 +31,6 @@ const storySchema = new Schema(
   }
 );
 
+const Story = model('Story', storySchema);
 
-module.exports = storySchema;
+module.exports = Story;
