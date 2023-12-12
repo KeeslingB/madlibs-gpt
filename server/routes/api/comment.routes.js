@@ -2,7 +2,7 @@ const router = require('express').Router();
 require("dotenv").config();
 
 // functions
-const { getAllComments } = require('../../controllers/comment.controller');
+const { getAllComments, getCommentsByStory, getSingleComment, writeComment, editComment, deleteComment } = require('../../controllers/comment.controller');
 
 
 // path definitions
