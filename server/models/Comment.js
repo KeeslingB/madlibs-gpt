@@ -1,12 +1,17 @@
 const { Schema, model} = require('mongoose');
 
 const commentSchema = new Schema({
-  user: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'User',
-    }
-  ],  
+//   user: [
+//     {
+//       type: Schema.Types.ObjectId,
+//       ref: 'User',
+//     }
+//   ], 
+// also, if we WERE using the user in the comment Schema, should it actually be an array? There's only one user per comment, after all.
+commenterName: {
+    type: String,
+    required: true
+},  
     commentText: {
         type: String,
         required: true
