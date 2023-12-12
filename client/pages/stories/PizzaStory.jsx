@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
+import '../../Story.css'
 
 export default function PizzaStory() {
   const [userData, setUserData] = useState({
     noun1: "",
     adj1: "",
     noun2: "",
-    nationality1: "", 
-    name1: "", 
-    adj2: "", 
-    adj3: "", 
-    adj4: "", 
-    noun3: "", 
-    noun4: "", 
-    num1: "", 
-    shape1: "", 
-    food1: "", 
-    food2: "", 
+    nationality1: "",
+    name1: "",
+    adj2: "",
+    adj3: "",
+    adj4: "",
+    noun3: "",
+    noun4: "",
+    num1: "",
+    shape1: "",
+    food1: "",
+    food2: "",
     num2: "",
   })
   const [story, setStory] = useState("");
@@ -31,27 +32,30 @@ export default function PizzaStory() {
   }
 
   return (
-    <div>
-      <h1>Madlibs!</h1>
-      <p>Create a story:</p>
-      <input type="text" name="adj1" placeholder="Enter an adjective" value={userData.adj1} onChange={handleInputChange}/>
-      <input type="text" name="nationality1" placeholder="Enter an adjective" value={userData.nationality1} onChange={handleInputChange}/>
-      <input type="text" name="name1" placeholder="Enter an adjective" value={userData.name1} onChange={handleInputChange}/>
-      <input type="text" name="noun1" placeholder="Enter a noun" value={userData.noun1} onChange={handleInputChange}/>
-      <input type="text" name="adj2" placeholder="Enter an adjective" value={userData.adj2} onChange={handleInputChange}/>
-      <input type="text" name="noun2" placeholder="Enter a noun" value={userData.noun2} onChange={handleInputChange}/>
-      <input type="text" name="adj3" placeholder="Enter an adjective" value={userData.adj3} onChange={handleInputChange}/>
-      <input type="text" name="adj4" placeholder="Enter an adjective" value={userData.adj4} onChange={handleInputChange}/>
-      <input type="text" name="noun3" placeholder="Enter a noun" value={userData.noun3} onChange={handleInputChange}/>
-      <input type="text" name="noun4" placeholder="Enter a noun" value={userData.noun4} onChange={handleInputChange}/>
-      <input type="text" name="num1" placeholder="Enter a number" value={userData.num1} onChange={handleInputChange}/>
-      <input type="text" name="shape1" placeholder="Enter a shape" value={userData.shape1} onChange={handleInputChange}/>
-      <input type="text" name="food1" placeholder="Enter a food" value={userData.food1} onChange={handleInputChange}/>
-      <input type="text" name="food2" placeholder="Enter a food" value={userData.food2} onChange={handleInputChange}/>
-      <input type="text" name="num2" placeholder="Enter a number" value={userData.num2} onChange={handleInputChange}/>
-
-      <button onClick={generateMadlibs}>Generate Story</button>
-      <p>{story}</p>
-    </div>
+    <>
+      <div>
+        <h1 className='storyHeader'>Madlibs!</h1>
+        <p className='createStoryText'>Create a story:</p>
+        <div className='inputContainer'>
+          <input className='inputBox' type="text" name="adj1" placeholder="Enter an adjective" value={userData.adj1} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="nationality1" placeholder="Enter an adjective" value={userData.nationality1} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="name1" placeholder="Enter an adjective" value={userData.name1} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="noun1" placeholder="Enter a noun" value={userData.noun1} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="adj2" placeholder="Enter an adjective" value={userData.adj2} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="noun2" placeholder="Enter a noun" value={userData.noun2} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="adj3" placeholder="Enter an adjective" value={userData.adj3} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="adj4" placeholder="Enter an adjective" value={userData.adj4} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="noun3" placeholder="Enter a noun" value={userData.noun3} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="noun4" placeholder="Enter a noun" value={userData.noun4} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="num1" placeholder="Enter a number" value={userData.num1} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="shape1" placeholder="Enter a shape" value={userData.shape1} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="food1" placeholder="Enter a food" value={userData.food1} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="food2" placeholder="Enter a food" value={userData.food2} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="num2" placeholder="Enter a number" value={userData.num2} onChange={handleInputChange} />
+          <button className='inputBox' onClick={generateMadlibs}>Generate Story</button>
+        </div>
+        <p className='storyText'>{story}</p>
+      </div>
+    </>
   )
 }
