@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { useAppCtx } from "../utils/AppProvider"
 // import anime from 'animejs/lib/anime.es.js';
-import '../../assets/css/style.css';
 import Animejs from './Animejs';
 import basicTimeLine from './Animejs';
 
@@ -59,11 +58,10 @@ export default function Auth({ usage = "signup" }) {
               <input type="password" name="password" value={userData.password} onChange={handleInputChange} />
             </div>
           </div>
-          <div className="button">
-
-          <button  className="mt-2 text">Submit Info</button>
-          <Animejs onClick={basicTimeLine}/>
-          </div>
+          {/* <div className="button"> */}
+             {/* <button  className="mt-2 text">Submit Info</button> */}
+          {/* </div> */}
+          <Animejs />
         </div> 
       </form>
     </div>
