@@ -7,7 +7,7 @@ const ObjectId = require('mongoose').Types;
 async function getAllComments(req, res) {
     try {
         console.log('Every comment.')
-        const allComments = await Comment.findAll({}).select('__v');
+        const allComments = await Comment.find({}).select('__v');
         // the select statement above tells mongoose to find the current/most current version in the array, instead of just the position in the array. 
         res.json(allComments);
         console.log('Found the comments')
