@@ -88,7 +88,7 @@ export default function UserPage() {
         <h2>Your Stories</h2>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "purple", width: '100%'}}>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem'}}>
+        <Card style={{ width: '20rem', height:'40rem', margin: '.5rem'}}>
           <Card.Body>
             <Card.Title>{title1}</Card.Title>
             <Card.Text>
@@ -97,7 +97,7 @@ export default function UserPage() {
             <Button variant="primary" style={{ bottom: '0' }}>View Story</Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
+        <Card style={{ width: '20rem', height:'40rem', margin: '.5rem' }}>
           <Card.Body>
             <Card.Title>{title2}</Card.Title>
             <Card.Text>
@@ -106,7 +106,7 @@ export default function UserPage() {
             <Button variant="primary" style={{ bottom: '0' }}>View Story</Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
+        <Card style={{ width: '20rem', height:'40rem', margin: '.5rem' }}>
           <Card.Body>
             <Card.Title>{title3}</Card.Title>
             <Card.Text>
@@ -115,20 +115,11 @@ export default function UserPage() {
             <Button variant="primary">View Story</Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
+        <Card style={{ width: '20rem', height:'40rem', margin: '.5rem' }}>
           <Card.Body>
             <Card.Title>{title4}</Card.Title>
             <Card.Text>
               {story4}
-            </Card.Text>
-            <Button variant="primary">View Story</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
-          <Card.Body>
-            <Card.Title>{title5}</Card.Title>
-            <Card.Text>
-              {story5}
             </Card.Text>
             <Button variant="primary">View Story</Button>
           </Card.Body>
@@ -136,16 +127,16 @@ export default function UserPage() {
       </div>
       <br></br>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "purple" }}>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem'}}>
+        <Card style={{ width: '20rem', height:'40rem', margin: '.5rem'}}>
           <Card.Body>
-            <Card.Title>{title1}</Card.Title>
+            <Card.Title>{title5}</Card.Title>
             <Card.Text>
-              {story1}
+              {story5}
             </Card.Text>
             <Button variant="primary" style={{ bottom: '0' }}>View Story</Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
+        <Card style={{ width: '20rem', height:'40rem', margin: '.5rem' }}>
           <Card.Body>
             <Card.Title>{title2}</Card.Title>
             <Card.Text>
@@ -154,7 +145,7 @@ export default function UserPage() {
             <Button variant="primary" style={{ bottom: '0' }}>View Story</Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
+        <Card style={{ width: '20rem', height:'40rem', margin: '.5rem' }}>
           <Card.Body>
             <Card.Title>{title3}</Card.Title>
             <Card.Text>
@@ -163,20 +154,11 @@ export default function UserPage() {
             <Button variant="primary">View Story</Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
+        <Card style={{ width: '20rem', height:'40rem', margin: '.5rem' }}>
           <Card.Body>
             <Card.Title>{title4}</Card.Title>
             <Card.Text>
               {story4}
-            </Card.Text>
-            <Button variant="primary">View Story</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
-          <Card.Body>
-            <Card.Title>{title5}</Card.Title>
-            <Card.Text>
-              {story5}
             </Card.Text>
             <Button variant="primary">View Story</Button>
           </Card.Body>
