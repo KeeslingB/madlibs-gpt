@@ -26,6 +26,10 @@ export default function Header() {
               <Nav.Link href="/auth">Login</Nav.Link>
             )}
 
+            {user?._id !== undefined && (
+              <Nav.Link href="/user">Your Stories</Nav.Link>
+            )}
+
           </Nav>
         </Navbar.Collapse>
       </Container>

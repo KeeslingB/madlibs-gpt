@@ -17,9 +17,21 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
+  createdOn: {
+    type: Date,
+    default: Date.now,
+  },
   story: [
     {
       type: Schema.Types.ObjectId,
+      ref: 'Story',
+    },
+    {
+      type: Schema.Types.String,
+      ref: 'Story',
+    },
+    {
+      type: Schema.Types.String,
       ref: 'Story',
     }
   ],
