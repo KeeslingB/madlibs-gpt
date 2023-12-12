@@ -1,13 +1,14 @@
+import React from "react";
+import HomeAnime from "../components/HomeAnime";
+// importing css
+import "../public/assests/Homepage.css";
 
 
-
-
-export default function HomePage(){
+export default function HomePage() {
 
   return (
     <>
-      <h1>Home Page</h1>
-      <p>The home page can be accessed by everyone.</p>
+      <HomeAnime></HomeAnime>
     </>
   )
 }
