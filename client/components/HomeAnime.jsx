@@ -1,17 +1,18 @@
 import anime from "animejs";
 import "../public/assests/Homepage.css"
+import React, { useEffect } from "react";
 
 export default function HomeAnime() {
-  document.addEventListener("DOMContentLoaded", () => { })
-  anime({
-    targets: '.svg path',
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: 'easeInOutSine',
-    duration: 15000,
-    direction: 'alternate',
-    loop: true
-  });
-
+  useEffect(() => {
+    window.addEventListener("DOMContentLoaded", anime({
+      targets: '.svg path',
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: 'easeInOutSine',
+      duration: 20000,
+      direction: 'alternate',
+      loop: true
+    }))
+  }, []);
 
   return (
     <div class="svg">
