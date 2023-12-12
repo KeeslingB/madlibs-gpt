@@ -34,12 +34,12 @@ export default function Signup({ usage = "login"}) {
         }
       })
       const response = await query.json()
-      console.log(response)
+      // console.log(response)
       if (response.result === "success") {
         window.location.href = "/"
       }
     } catch (err) {
-      console.log(err.message)
+      // console.log(err.message)
     }
   }
 

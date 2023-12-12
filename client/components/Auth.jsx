@@ -34,12 +34,12 @@ export default function Auth({ usage = "login"}) {
         }
       })
       const response = await query.json()
-      console.log(response)
+      // console.log(response)
       if (response.result === "success") {
         window.location.href = "/"
       }
     } catch (err) {
-      console.log(err.message)
+      // console.log(err.message)
     }
   }
 
@@ -47,7 +47,6 @@ export default function Auth({ usage = "login"}) {
     e.preventDefault()
     play();
     setTimeout(() => submitForm(), 1000)
-    // console.log('here');
   }
 
   useEffect(() => {
