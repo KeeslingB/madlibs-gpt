@@ -3,6 +3,7 @@ import AppProvider from './utils/AppProvider';
 import { Header, ProtectedRoute } from './components';
 import { HomePage, AuthPage, Logout, PrivatePage } from './pages/'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import UserPage from './pages/UserPage';
 
 export default function App(){
 
@@ -14,7 +15,13 @@ export default function App(){
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/auth" element={<AuthPage />} />
-
+            
+            <Route path="/user" element={
+              <ProtectedRoute>
+                <UserPage />
+              </ProtectedRoute>
+            }/>
+            
             <Route path="/private" element={
               <ProtectedRoute>
                 <PrivatePage />

@@ -14,17 +14,21 @@ export default function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            
-            { user?._id !== undefined && (
+
+            {user?._id !== undefined && (
               <Nav.Link href="/private">Private Page</Nav.Link>
             )}
 
-            { user?._id !== undefined ? (
+            {user?._id !== undefined ? (
               <Nav.Link href="/logout">Logout</Nav.Link>
-            ):(
+            ) : (
               <Nav.Link href="/auth">Login</Nav.Link>
             )}
-            
+
+            {user?._id !== undefined && (
+              <Nav.Link href="/user">Your Stories</Nav.Link>
+            )}
+
           </Nav>
         </Navbar.Collapse>
       </Container>

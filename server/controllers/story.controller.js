@@ -32,7 +32,9 @@ module.exports = {
       const story = await Story.create(req.body);
       const user = await User.findOneAndUpdate(
         { _id: req.params.id },
-        { $addToSet: { story: story._id } },
+        { $push: { story: story._id }  },
+        { $push: { story: story.title } },
+        { $push: { story: story.story } },
         { new: true }
       );
 
