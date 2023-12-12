@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../../Story.css'
 
 export default function ArcadeStory() {
   const [userData, setUserData] = useState({
@@ -7,8 +8,8 @@ export default function ArcadeStory() {
     verb1: "",
     noun2: "",
     noun3: "",
-    noun4: "", 
-    noun5: "", 
+    noun4: "",
+    noun5: "",
     noun6: ""
   })
   const [story, setStory] = useState("");
@@ -24,18 +25,23 @@ export default function ArcadeStory() {
   }
 
   return (
-    <div>
-      <h1>Madlibs!</h1>
-      <p>Create a story:</p>
-      <input type="text" name="noun1" placeholder="Enter a plural noun" value={userData.noun1} onChange={handleInputChange}/>
-      <input type="text" name="noun2" placeholder="Enter a plural noun" value={userData.noun2} onChange={handleInputChange}/>
-      <input type="text" name="noun3" placeholder="Enter a noun" value={userData.noun3} onChange={handleInputChange}/>
-      <input type="text" name="verb1" placeholder="Enter a -ing verb" value={userData.verb1} onChange={handleInputChange}/>
-      <input type="text" name="noun4" placeholder="Enter a plural noun" value={userData.noun4} onChange={handleInputChange}/>
-      <input type="text" name="noun5" placeholder="Enter a noun" value={userData.noun5} onChange={handleInputChange}/>
-      <input type="text" name="noun6" placeholder="Enter a plural noun" value={userData.noun6} onChange={handleInputChange}/>
-      <button onClick={generateMadlibs}>Generate Story</button>
-      <p>{story}</p>
-    </div>
+    <>
+      <div>
+        <h1 className='storyHeader'>Madlibs!</h1>
+        <p className='createStoryText'>Create a story:</p>
+        <div className='inputContainer'>
+          <input className='inputBox' type="text" name="noun1" placeholder="Enter a plural noun" value={userData.noun1} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="noun2" placeholder="Enter a plural noun" value={userData.noun2} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="noun3" placeholder="Enter a noun" value={userData.noun3} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="verb1" placeholder="Enter a -ing verb" value={userData.verb1} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="noun4" placeholder="Enter a plural noun" value={userData.noun4} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="noun5" placeholder="Enter a noun" value={userData.noun5} onChange={handleInputChange} />
+          <input className='inputBox' type="text" name="noun6" placeholder="Enter a plural noun" value={userData.noun6} onChange={handleInputChange} />
+          <button className='inputBox' onClick={generateMadlibs}>Generate Story</button>
+        </div>
+        <p className='storyText'>{story}</p>
+      </div>
+    
+    </>
   )
 }
