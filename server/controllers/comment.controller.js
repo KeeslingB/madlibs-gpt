@@ -1,4 +1,5 @@
-const { Story, User } = require('../models');
+const { Story } = require('../models');
+const { Comment } = require('../models/Comment')
 const ObjectId = require('mongoose').Types;
 
 
@@ -6,12 +7,12 @@ const ObjectId = require('mongoose').Types;
 async function getAllComments(req, res) {
     try {
         console.log('Every comment.')
-        const allComments = Comment.find({}).select('__v');
+        const allComments = await Comment.findAll({}).select('__v');
         // the select statement above tells mongoose to find the current/most current version in the array, instead of just the position in the array. 
         res.json(allComments);
         console.log('Found the comments')
     } catch (err) {
-        res.status(500).json(err);
+        res.status(500).json(err.message);
     }
 };
 
