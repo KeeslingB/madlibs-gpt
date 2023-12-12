@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useAppCtx } from "../utils/AppProvider"
-import "../public/assests/Header.css"
+import "../Header.css"
 
 export default function Header() {
   const { user } = useAppCtx()
