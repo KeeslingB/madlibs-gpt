@@ -8,6 +8,11 @@ const commentSchema = new Schema({
 //     }
 //   ], 
 // also, if we WERE using the user in the comment Schema, should it actually be an array? There's only one user per comment, after all.
+story: {
+    type: Schema.Types.ObjectId,
+    ref: 'Story',
+    required: true
+},
 commenterName: {
     type: String,
     required: true
