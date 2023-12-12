@@ -1,5 +1,5 @@
 import anime from "animejs";
-import "../public/assests/Homepage.css"
+import "../Homepage.css"
 
 export default function HomeAnime() {
   document.addEventListener("DOMContentLoaded", () => { })
