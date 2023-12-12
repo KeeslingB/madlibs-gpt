@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Accordion from 'react-bootstrap/Accordion';
 
 
 
@@ -25,7 +26,7 @@ export default function UserPage() {
 
 
   useEffect(() => {
-    fetch(`/api/user/65788177c67d4362ebcae9a8`, {
+    fetch(`/api/user/6578973dd9e0d46dce9a3d15`, {
       method: "GET"
     })
       .then((response) => response.json())
@@ -87,100 +88,21 @@ export default function UserPage() {
       <div>
         <h2>Your Stories</h2>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "purple", width: '100%'}}>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem'}}>
-          <Card.Body>
-            <Card.Title>{title1}</Card.Title>
-            <Card.Text>
-              {story1}
-            </Card.Text>
-            <Button variant="primary" style={{ bottom: '0' }}>View Story</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
-          <Card.Body>
-            <Card.Title>{title2}</Card.Title>
-            <Card.Text>
-              {story2}
-            </Card.Text>
-            <Button variant="primary" style={{ bottom: '0' }}>View Story</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
-          <Card.Body>
-            <Card.Title>{title3}</Card.Title>
-            <Card.Text>
-              {story3}
-            </Card.Text>
-            <Button variant="primary">View Story</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
-          <Card.Body>
-            <Card.Title>{title4}</Card.Title>
-            <Card.Text>
-              {story4}
-            </Card.Text>
-            <Button variant="primary">View Story</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
-          <Card.Body>
-            <Card.Title>{title5}</Card.Title>
-            <Card.Text>
-              {story5}
-            </Card.Text>
-            <Button variant="primary">View Story</Button>
-          </Card.Body>
-        </Card>
-      </div>
-      <br></br>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "purple" }}>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem'}}>
-          <Card.Body>
-            <Card.Title>{title1}</Card.Title>
-            <Card.Text>
-              {story1}
-            </Card.Text>
-            <Button variant="primary" style={{ bottom: '0' }}>View Story</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
-          <Card.Body>
-            <Card.Title>{title2}</Card.Title>
-            <Card.Text>
-              {story2}
-            </Card.Text>
-            <Button variant="primary" style={{ bottom: '0' }}>View Story</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
-          <Card.Body>
-            <Card.Title>{title3}</Card.Title>
-            <Card.Text>
-              {story3}
-            </Card.Text>
-            <Button variant="primary">View Story</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
-          <Card.Body>
-            <Card.Title>{title4}</Card.Title>
-            <Card.Text>
-              {story4}
-            </Card.Text>
-            <Button variant="primary">View Story</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: '20rem', height:'30rem', margin: '.5rem' }}>
-          <Card.Body>
-            <Card.Title>{title5}</Card.Title>
-            <Card.Text>
-              {story5}
-            </Card.Text>
-            <Button variant="primary">View Story</Button>
-          </Card.Body>
-        </Card>
+      <div >
+      <Accordion >
+        <Accordion.Item eventKey="0">
+          <Accordion.Header>{title1}</Accordion.Header>
+          <Accordion.Body>
+            {story1}
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="1">
+          <Accordion.Header>{title2}</Accordion.Header>
+          <Accordion.Body>
+            {story2}
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
       </div>
 
     </>
