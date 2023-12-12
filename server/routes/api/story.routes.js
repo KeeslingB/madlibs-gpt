@@ -18,6 +18,6 @@ router
   .route("/:storyId").get(getSingleStory)
 
 router
-  .route('/:id/:id').delete(deleteStory)
+  .route('/:storyId/:userId/:storyId').delete(deleteStory)
 
 module.exports = router;

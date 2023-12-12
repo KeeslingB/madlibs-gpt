@@ -1,4 +1,5 @@
 const { Story, User } = require('../models');
+const ObjectId = require('mongoose').Types
 
 
 module.exports = {
@@ -50,18 +51,28 @@ module.exports = {
 
   async deleteStory(req, res) {
     try {
-      const user = await User.findOneAndUpdate(
-        { _id: req.params.id },
-        { $pull: { story: { _id: req.params.id } } },
-      );
-      const story = await Story.findOneAndDelete({ _id: req.params.id });
+      const story = await Story.findOneAndDelete({ _id: req.params.storyId });
+
       if (!story) {
         return res.status(404).json({ message: 'No such story exists' });
       }
-      res.json({ message: user });
+
+      const user = await User.findByIdAndUpdate(
+        { _id: req.params.userId },
+        { $pull: { storys: req.params.storyId } },
+        { new: true }
+      );
+
+      if (!user) {
+        return res.status(404).json({
+          message: 'story deleted, but no users found',
+        });
+      }
+
+      res.json({ message: 'story successfully deleted' });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
     }
-  },
-};
+  }
+}

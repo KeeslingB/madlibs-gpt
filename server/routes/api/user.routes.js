@@ -11,9 +11,6 @@ const {
   deleteUserById,
   authenticate,
   verifyUser,
-  addStory,
-  deleteStory,
-  getStory
 } = require('../../controllers/user.controller');
 
 
@@ -108,17 +105,6 @@ router.delete("/:id", async (req, res) => {
   }
 })
 
-router
-  .route('/:id/story')
-  .post(addStory);
-
-router
-  .route('/:id/story/:storyId')
-  .delete(deleteStory);
-
-router
-  .route('/story/:storyId')
-  .get(getStory);
 
 
 
