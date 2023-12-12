@@ -1,5 +1,7 @@
 import anime from "animejs";
 import "../public/assests/Homepage.css"
+import { useEffect } from "react";
+
 
 export default function HomeAnime() {
   useEffect(() => {
@@ -9,7 +11,7 @@ export default function HomeAnime() {
       easing: 'easeInOutSine',
       duration: 20000,
       direction: 'alternate',
-      loop: true
+      loop: false
     }))
   }, []);
 
