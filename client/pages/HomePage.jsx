@@ -1,7 +1,7 @@
 import React from "react";
 import HomeAnime from "../components/HomeAnime";
 // importing css
-import "../public/assests/Homepage.css";
+import "../Homepage.css";
 
 
 export default function HomePage() {

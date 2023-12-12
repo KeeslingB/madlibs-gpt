@@ -81,6 +81,7 @@ async function updateItemById(id, data) {
   }
 }
 
+
 async function deleteItemById(id) {
   try {
     return await Model.findByIdAndDelete(id);
@@ -89,6 +90,7 @@ async function deleteItemById(id) {
   }
 }
 
+
 module.exports = {
   getAllUsers: getAllItems,
   getUserById: getItemById,
@@ -96,5 +98,5 @@ module.exports = {
   updateUserById: updateItemById,
   deleteUserById: deleteItemById,
   authenticate,
-  verifyUser
+  verifyUser,
 }

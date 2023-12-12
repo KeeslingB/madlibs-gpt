@@ -1,6 +1,5 @@
 import anime from "animejs";
 import "../public/assests/Homepage.css"
-import React, { useEffect } from "react";
 
 export default function HomeAnime() {
   useEffect(() => {
