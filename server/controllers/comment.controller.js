@@ -5,6 +5,7 @@ const ObjectId = require('mongoose').Types;
 // finding comments
 async function getAllComments(req, res) {
     try {
+        console.log('Every comment.')
         const allComments = Comment.find({}).select('__v');
         // the select statement above tells mongoose to find the current/most current version in the array, instead of just the position in the array. 
         res.json(allComments);
@@ -44,6 +45,7 @@ async function getSingleComment(req, res) {
 // make a comment
 async function writeComment(req, res) {
     try {
+        console.log('Trying to write')
         const newComment = await Comment.create(req.body);
         const itsStory = await Story.findOneAndUpdate(
             { _id: req.params.id },
