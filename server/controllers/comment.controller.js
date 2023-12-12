@@ -1,13 +1,13 @@
-const { Story } = require('../models');
-const { Comment } = require('../models/Comment')
+const { Story, Comment } = require('../models');
 const ObjectId = require('mongoose').Types;
+
 
 
 // finding comments
 async function getAllComments(req, res) {
     try {
         console.log('Every comment.')
-        const allComments = await Comment.find({}).select('__v');
+        const allComments = await Comment.find().select('__v');
         // the select statement above tells mongoose to find the current/most current version in the array, instead of just the position in the array. 
         res.json(allComments);
         console.log('Found the comments')
@@ -34,10 +34,11 @@ async function getCommentsByStory(req, res) {
 
 async function getSingleComment(req, res) {
     try {
-        const oneComment = await Comment.findOne({ _id: req.params.ObjectId }).select('__v');
+        const oneComment = await Comment.findOne({ _id: req.params.id });
         if (!oneComment) {
             return res.status(404).json({ message: 'No such comment' })
         }
+        res.json(oneComment)
     } catch (err) {
         res.status(500).json(err);
     }
@@ -48,11 +49,12 @@ async function writeComment(req, res) {
     try {
         console.log('Trying to write')
         const newComment = await Comment.create(req.body);
+
         const itsStory = await Story.findOneAndUpdate(
-            { _id: req.params.id },
-            { $push: { _id: newComment._id } },
-            { $push: { commenterName: newComment.commenterName } },
-            { $push: { commentText: newComment.commentText } },
+            { _id: req.params.storyId },
+            { $push: { comments: newComment._id } },
+            { $push: { comments: newComment.commenterName } },
+            { $push: { comments: newComment.commentText } },
             { new: true }
         );
         if (!itsStory) {
@@ -61,7 +63,7 @@ async function writeComment(req, res) {
         res.json(newComment);
 
     } catch (err) {
-        res.status(500).json(err);
+        res.status(500).json(err.message);
     }
 };
 

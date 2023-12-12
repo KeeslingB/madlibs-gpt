@@ -10,8 +10,8 @@ router.route("/").get(getAllComments);
 router.route("/:id").get(getSingleComment);
 router.route("/:storyId/:id").get(getCommentsByStory);
 // full path SHOULD end up being api/comment/storyID
-// nope, changed for simplicity.
-router.route("/").post(writeComment);
+
+router.route("/:storyId").post(writeComment);
 router.route("/:id").put(editComment);
 router.route("/:id").delete(deleteComment);
 
