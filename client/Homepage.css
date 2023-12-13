@@ -1,0 +1,26 @@
+:root {
+  background-color: #030303;
+
+}
+
+div#root {
+  background-color: #030303;
+}
+
+.container.pt-5 {
+  background-color: #030303;
+  font-family: 'Bungee', sans-serif;
+  color: #6f42c1;
+  text-align: center;
+}
+
+.h1,
+h1 {
+  font-size: 100px;
+  position: center;
+}
+
+#animation-title path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+}
