@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import React, { useState, useEffect } from "react";
 
+import { Commenting } from '../components/'
 
 
 
@@ -46,11 +47,12 @@ export default function ViewPage() {
                   {story1}
                 </Card.Text>
               </Card.Body>
+              < Commenting props='${storyId}' />
             </Card>
-            <form>
+            {/* <form>
               <textarea defaultValue="enter a comment!" style={{ width: '30rem', height: '10rem', margin: '.5rem', alignItems: "center" }}></textarea>
               <button>Send Comment</button>
-            </form>
+            </form> */}
           </Col>
           <Col></Col>
         </Row>

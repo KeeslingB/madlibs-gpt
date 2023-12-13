@@ -8,6 +8,7 @@ div#root {
 }
 
 .container.pt-5 {
+  position: relative;
   background-color: #030303;
   font-family: 'Bungee', sans-serif;
   color: #6f42c1;
@@ -16,19 +17,21 @@ div#root {
 }
 
 .sketch {
+  position: relative;
   top: 50%;
   left: 50%;
   animation-name: animate;
-  animation-duration: 5s;
+  animation-duration: 2s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
-  transform: translate(0%, 30%);
+  transform: translate(-50%, 30%);
 }
 
 .blob {
+  position: relative;
   top: 50%;
   left: 100%;
-  transform: translate(100%, -12%);
+  transform: translate(0%, -12%);
 }
 
 @keyframes animate {
@@ -46,27 +49,37 @@ div#root {
 .h1,
 h1 {
   font-size: 100px;
-  position: center;
+  position: relative;
 }
-
-#animation-title path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 0;
-}
-
-
 
 .p {
-  position: absolute;
+  position: relative;
 }
 
 .stories {
   position: relative;
-  transform: translate(0%, -2400%);
+  transform: translate(0%, -2450%);
 }
 
-.box,
-.box-2 {
+.box {
   position: relative;
   transform: translate(0%, -200%);
+  box-shadow: 0 0 10px 5px #2685b8,
+    0 0 20px 7px #ebecca,
+    0 0 25px 20px #8a2be2,
+    0 0 30px 25px #2d1064;
+}
+
+.box-2 {
+  position: relative;
+  transform: translate(0%, -180%);
+  box-shadow: 0 0 10px 2px #2685b8,
+    0 0 20px 7px #ebecca,
+    0 0 25px 20px #8a2be2,
+    0 0 30px 25px #2d1064;
+}
+
+
+.btn.btn-primary {
+  color: #12051a
 }
