@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Accordion from 'react-bootstrap/Accordion';
+<<<<<<< HEAD
 import { useAppCtx } from "../utils/AppProvider"
 
+=======
+// import Parse from 'parse/react-native';
+>>>>>>> master
 
 
 
