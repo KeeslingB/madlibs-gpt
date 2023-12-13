@@ -11,27 +11,33 @@ export default function HomePage() {
 
   const [story1, setStory1] = useState(null);
   const [title1, setTitle1] = useState(null);
+  const [id1, setId1] = useState(null);
 
   const [story2, setStory2] = useState(null);
   const [title2, setTitle2] = useState(null);
+  const [id2, setId2] = useState(null);
 
   const [story3, setStory3] = useState(null);
   const [title3, setTitle3] = useState(null);
+  const [id3, setId3] = useState(null);
 
   const [story4, setStory4] = useState(null);
   const [title4, setTitle4] = useState(null);
+  const [id4, setId4] = useState(null);
 
   const [story5, setStory5] = useState(null);
   const [title5, setTitle5] = useState(null);
+  const [id5, setId5] = useState(null);
 
   const [story6, setStory6] = useState(null);
   const [title6, setTitle6] = useState(null);
+  const [id6, setId6] = useState(null);
 
-  const [story7, setStory7] = useState(null);
-  const [title7, setTitle7] = useState(null);
+  // const [story7, setStory7] = useState(null);
+  // const [title7, setTitle7] = useState(null);
 
-  const [story8, setStory8] = useState(null);
-  const [title8, setTitle8] = useState(null);
+  // const [story8, setStory8] = useState(null);
+  // const [title8, setTitle8] = useState(null);
 
 
   useEffect(() => {
@@ -48,6 +54,7 @@ export default function HomePage() {
           .then((data) => {
             setStory1(data.story);
             setTitle1(data.title);
+            setId1(data._id);
           })
 
         fetch(`/api/story/${data[1]._id}`, {
@@ -57,6 +64,7 @@ export default function HomePage() {
           .then((data) => {
             setStory2(data.story);
             setTitle2(data.title);
+            setId2(data._id);
           })
 
         fetch(`/api/story/${data[2]._id}`, {
@@ -66,6 +74,7 @@ export default function HomePage() {
           .then((data) => {
             setStory3(data.story);
             setTitle3(data.title);
+            setId3(data._id);
           })
 
         fetch(`/api/story/${data[3]._id}`, {
@@ -75,6 +84,7 @@ export default function HomePage() {
           .then((data) => {
             setStory4(data.story);
             setTitle4(data.title);
+            setId4(data._id);
           })
 
         fetch(`/api/story/${data[4]._id}`, {
@@ -84,6 +94,7 @@ export default function HomePage() {
           .then((data) => {
             setStory5(data.story);
             setTitle5(data.title);
+            setId5(data._id);
           })
 
         fetch(`/api/story/${data[5]._id}`, {
@@ -93,6 +104,7 @@ export default function HomePage() {
           .then((data) => {
             setStory6(data.story);
             setTitle6(data.title);
+            setId6(data._id);
           })
 
         fetch(`/api/story/${data[6]._id}`, {
@@ -131,7 +143,7 @@ export default function HomePage() {
               <Card.Text>
                 {story1}
               </Card.Text>
-              <Button variant="primary" href="/viewstory?storyid=657a1b2f3752a9d95a726822">View Story</Button>
+              <Button variant="primary" href={`/viewstory?storyid=${id1}`}>View Story</Button>
             </Card.Body>
           </Card>
           <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
@@ -140,7 +152,7 @@ export default function HomePage() {
               <Card.Text>
                 {story2}
               </Card.Text>
-              <Button variant="primary" href="/viewstory">View Story</Button>
+              <Button variant="primary" href={`/viewstory?storyid=${id2}`}>View Story</Button>
             </Card.Body>
           </Card>
           <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
@@ -149,7 +161,7 @@ export default function HomePage() {
               <Card.Text>
                 {story3}
               </Card.Text>
-              <Button variant="primary" href="/viewstory?storyid=657893add9e0d46dce9a3c9a">View Story</Button>
+              <Button variant="primary" href={`/viewstory?storyid=${id3}`}>View Story</Button>
             </Card.Body>
           </Card>
         </div>
@@ -161,7 +173,7 @@ export default function HomePage() {
               <Card.Text>
                 {story4}
               </Card.Text>
-              <Button variant="primary" href="/viewstory">View Story</Button>
+              <Button variant="primary" href={`/viewstory?storyid=${id4}`}>View Story</Button>
             </Card.Body>
           </Card>
           <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
@@ -170,7 +182,7 @@ export default function HomePage() {
               <Card.Text>
                 {story5}
               </Card.Text>
-              <Button variant="primary" href="/viewstory">View Story</Button>
+              <Button variant="primary" href={`/viewstory?storyid=${id5}`}>View Story</Button>
             </Card.Body>
           </Card>
           <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
@@ -179,7 +191,7 @@ export default function HomePage() {
               <Card.Text>
                 {story6}
               </Card.Text>
-              <Button variant="primary" href="/viewstory">View Story</Button>
+              <Button variant="primary" href={`/viewstory?storyid=${id6}`}>View Story</Button>
             </Card.Body>
           </Card>
         </div>
