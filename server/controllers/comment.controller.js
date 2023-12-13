@@ -50,7 +50,10 @@ async function getSingleComment(req, res) {
 async function writeComment(req, res) {
     try {
         console.log('Trying to write')
-        const newComment = await Comment.create(req.body);
+        console.log(req.body)
+
+        const comment = {...req.body, story: req.params.storyId }
+        const newComment = await Comment.create(comment);
 
         const itsStory = await Story.findOneAndUpdate(
             { _id: req.params.storyId },
