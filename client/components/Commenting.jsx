@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 
 export default function Commenting(props) {
 
-    const [commentData, setCommentData] = useState({ story: props.storyId, commenterName: "", commentText: "", });
+    const [commentData, setCommentData] = useState({ story: props, commenterName: "", commentText: "", });
 
     function handleInputChange(e) {
         setCommentData({ ...commentData, [e.target.name]: e.target.value })
@@ -15,7 +15,7 @@ export default function Commenting(props) {
 
     async function sendForm() {
         //if i can set the story id through props this should be simpler.
-        const commentOn = `api/comment/${props.storyId}`
+        const commentOn = `api/comment/${props}`
 
         try {
             console.log("sending comment...")
