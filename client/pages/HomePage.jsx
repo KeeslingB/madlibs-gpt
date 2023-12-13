@@ -104,7 +104,7 @@ export default function HomePage() {
             setStory7(data.story);
             setTitle7(data.title);
           })
-          
+
         fetch(`/api/story/${data[7]._id}`, {
           method: "GET"
         })
@@ -158,11 +158,7 @@ export default function HomePage() {
             <Card.Text>
               {story4}
             </Card.Text>
-<<<<<<< HEAD
-            <Button variant="primary" color="#2370b8">View Story</Button>
-=======
             <Button variant="primary" href="/viewstory">View Story</Button>
->>>>>>> master
           </Card.Body>
         </Card>
       </div>
