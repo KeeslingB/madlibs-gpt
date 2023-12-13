@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-// import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 // import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
 // import Parse from 'parse/react-native';
-import Parse from 'parse/react-native';
+
 
 
 
@@ -41,7 +41,7 @@ export default function UserPage() {
   const [story10, setStory10] = useState(null);
   const [title10, setTitle10] = useState(null);
 
-  const userId = "6578973dd9e0d46dce9a3d15"
+  const userId = "6578f6cbbdc71ab96f7dea8b"
 
   
 
