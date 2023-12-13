@@ -1,7 +1,28 @@
 import React, { useState } from 'react';
 import '../../Story.css'
+import { useAppCtx } from "../../utils/AppProvider"
 
 export default function ArcadeStory() {
+
+  function addStory() {
+    fetch(`/api/story/${user._id}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ title: 'At The Arcade', story: `${story}`}),
+    });
+  }
+
+  const { user } = useAppCtx()
+
+  function test() {
+    if (!user)
+      return "none"
+  }
+
+  const none = test()
+
   const [userData, setUserData] = useState({
     noun1: "",
     adj1: "",
@@ -40,8 +61,9 @@ export default function ArcadeStory() {
           <button className='inputBox' onClick={generateMadlibs}>Generate Story</button>
         </div>
         <p className='storyText'>{story}</p>
+        <button onClick={addStory} style={{ display: `${none}` }}>Save Story</button>
       </div>
-    
+
     </>
   )
 }

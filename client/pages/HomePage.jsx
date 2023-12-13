@@ -126,7 +126,7 @@ export default function HomePage() {
           <h1 className="stories">Stories</h1><br></br>
         </div>
         <div className="box" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "#2d1064", width: '100%' }}>
-          <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
+          <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
             <Card.Body >
               <Card.Title>{title1}</Card.Title><br></br>
               <Card.Text>
@@ -135,7 +135,7 @@ export default function HomePage() {
               <Button variant="primary" href="/viewstory">View Story</Button>
             </Card.Body>
           </Card>
-          <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
+          <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
             <Card.Body>
               <Card.Title>{title2}</Card.Title><br></br>
               <Card.Text>
@@ -144,7 +144,7 @@ export default function HomePage() {
               <Button variant="primary" href="/viewstory">View Story</Button>
             </Card.Body>
           </Card>
-          <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
+          <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
             <Card.Body>
               <Card.Title>{title3}</Card.Title><br></br>
               <Card.Text>
@@ -153,7 +153,10 @@ export default function HomePage() {
               <Button variant="primary" href="/viewstory">View Story</Button>
             </Card.Body>
           </Card>
-          <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
+        </div>
+        <br></br>
+        <div className="box-2" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "#2d1064" }}>
+        <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
             <Card.Body>
               <Card.Title>{title4}</Card.Title><br></br>
               <Card.Text>
@@ -162,10 +165,7 @@ export default function HomePage() {
               <Button variant="primary" href="/viewstory">View Story</Button>
             </Card.Body>
           </Card>
-        </div>
-        <br></br>
-        <div className="box-2" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "#2d1064" }}>
-          <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
+          <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
             <Card.Body>
               <Card.Title>{title5}</Card.Title><br></br>
               <Card.Text>
@@ -174,29 +174,11 @@ export default function HomePage() {
               <Button variant="primary" href="/viewstory">View Story</Button>
             </Card.Body>
           </Card>
-          <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
+          <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
             <Card.Body>
               <Card.Title>{title6}</Card.Title><br></br>
               <Card.Text>
                 {story6}
-              </Card.Text>
-              <Button variant="primary" href="/viewstory">View Story</Button>
-            </Card.Body>
-          </Card>
-          <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
-            <Card.Body>
-              <Card.Title>{title7}</Card.Title><br></br>
-              <Card.Text>
-                {story7}
-              </Card.Text>
-              <Button variant="primary" href="/viewstory">View Story</Button>
-            </Card.Body>
-          </Card>
-          <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
-            <Card.Body>
-              <Card.Title>{title8}</Card.Title><br></br>
-              <Card.Text>
-                {story8}
               </Card.Text>
               <Button variant="primary" href="/viewstory">View Story</Button>
             </Card.Body>
