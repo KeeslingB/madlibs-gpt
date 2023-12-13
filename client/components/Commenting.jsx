@@ -17,7 +17,7 @@ export default function Commenting(props) {
         //if i can set the story id through props this should be simpler.
         e.preventDefault();
         const commentOn = `api/comment/${props}`
-
+        console.log(props)
         try {
             console.log("sending comment...")
             const query = await fetch(commentOn, {
