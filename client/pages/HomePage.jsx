@@ -131,7 +131,7 @@ export default function HomePage() {
               <Card.Text>
                 {story1}
               </Card.Text>
-              <Button variant="primary" href="/viewstory?storyid=657a12e4cfb5dbd724aca080">View Story</Button>
+              <Button variant="primary" href="/viewstory?storyid=657a1b2f3752a9d95a726822">View Story</Button>
             </Card.Body>
           </Card>
           <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
@@ -149,7 +149,7 @@ export default function HomePage() {
               <Card.Text>
                 {story3}
               </Card.Text>
-              <Button variant="primary" href="/viewstory">View Story</Button>
+              <Button variant="primary" href="/viewstory?storyid=657893add9e0d46dce9a3c9a">View Story</Button>
             </Card.Body>
           </Card>
         </div>
