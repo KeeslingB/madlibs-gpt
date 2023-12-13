@@ -128,7 +128,7 @@ export default function HomePage() {
       <div>
         <h1 className="stories">Stories</h1><br></br>
       </div>
-      <div className="box" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "purple", width: '100%' }}>
+      <div className="box" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "#2d1064", width: '100%' }}>
         <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
           <Card.Body >
             <Card.Title>{title1}</Card.Title><br></br>
@@ -162,12 +162,12 @@ export default function HomePage() {
             <Card.Text>
               {story4}
             </Card.Text>
-            <Button variant="primary">View Story</Button>
+            <Button variant="primary" color="#2370b8">View Story</Button>
           </Card.Body>
         </Card>
       </div>
       <br></br>
-      <div className="box-2" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "purple" }}>
+      <div className="box-2" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "#2d1064" }}>
         <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
           <Card.Body>
             <Card.Title>{title5}</Card.Title><br></br>
