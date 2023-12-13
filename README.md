@@ -14,7 +14,7 @@
 Create your own madlibs and save them with our App!
 
 ## How to use
-Upon first arrival of site youll be greeted with our animated logo and blob! Accompanied by Story examples where you can then view and add comments if you are Signed in ,You'll notice on the upper left youll see Home / Create Page / Login tabs that will redirect you to the corresponding pages.
+Upon first arrival of site youll be greeted with our animated logo and blob! Accompanied by Story examples where you can then view and add comments if you are Signed in ,You'll notice on the upper left youll see Home / Create Page / Login tabs that will redirect you to the corresponding pages.changes
 
 
 ## Credits
