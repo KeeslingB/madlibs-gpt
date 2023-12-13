@@ -14,7 +14,7 @@
 Create your own madlibs and save them with our App!
 
 ## How to use
-instructions on how to use.
+Upon first arrival of site youll be greeted with our animated logo and blob! Accompanied by Story examples where you can then view and add comments if you are Signed in ,You'll notice on the upper left youll see Home / Create Page / Login tabs that will redirect you to the corresponding pages.changes
 
 
 ## Credits
@@ -32,16 +32,15 @@ BootCampSpot and its available resources were a great help with all the addition
 
 
 ## Project Examples
-
- ![](./assets/Untitled%20video%20-%20Made%20with%20Clipchamp.gif).
-
-
------------------------------------------------------------
+ ![](./assets/Untitled%20video%20-%20Made%20with%20Clipchamp.gif)
+ 
 - [Project Deployed Here!](https://madlibsgpt-47c520ae93df.herokuapp.com/)  
 - [Project Repo Here!](https://github.com/KeeslingB/madlibs-gpt)
 
-## Team
-### GitHub:
+
+ ## Github Team
+
+ ![](./assets/github-mark-white.png)
 - [Joe Lipovetz](https://github.com/jlipovetz)
 - [Victor Montelongo](https://github.com/VictorMontelongo)
 - [Ben Pavlis](https://github.com/bpavlis)
