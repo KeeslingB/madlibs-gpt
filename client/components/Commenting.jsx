@@ -11,6 +11,7 @@ export default function Commenting(){
         setCommentData({...commentData, [e.target.name]: e.target.value })
     };
 
+    // useEffect for getting storyid? 
     async function getStory(){
         // something await fetch("api/story/storyid").
     }
@@ -30,7 +31,7 @@ export default function Commenting(){
     return
     <>
     <form>
-        
+
     </form>
     </>
 
