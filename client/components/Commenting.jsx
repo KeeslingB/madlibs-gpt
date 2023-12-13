@@ -12,7 +12,8 @@ export default function Commenting(){
     };
 
     async function sendForm(){
-
+        // do i need to check if the user is signed in here, or will the comment form component be loaded in other components conditionally? or are we allowing anonymous comments all the way?
+        // also, where do i set the story id?
 
         try {
             console.log("sending comment...")
@@ -23,5 +24,8 @@ export default function Commenting(){
     }
 
     return
+    <>
+    
+    </>
 
 }
