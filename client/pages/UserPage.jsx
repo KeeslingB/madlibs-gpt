@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
-import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
-// import Parse from 'parse/react-native';
+import { useAppCtx } from "../utils/AppProvider"
 
 
 
 
 export default function UserPage() {
+
+  const { user } = useAppCtx()
+
+
+  // console.log(user._id)
 
   const [date, setDate] = useState(null);
 
@@ -28,7 +31,7 @@ export default function UserPage() {
 
   const [story6, setStory6] = useState(null);
   const [title6, setTitle6] = useState(null);
-  
+
   const [story7, setStory7] = useState(null);
   const [title7, setTitle7] = useState(null);
 
@@ -41,38 +44,42 @@ export default function UserPage() {
   const [story10, setStory10] = useState(null);
   const [title10, setTitle10] = useState(null);
 
-  const userId = "6578f6cbbdc71ab96f7dea8b"
 
-  
+  // const userId = "6578f6cbbdc71ab96f7dea8b"
+
+
+
+
+
 
   useEffect(() => {
-    fetch(`/api/user/${userId}`, {
-      method: "GET"
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setDate(data.payload.createdOn);
-        if (data.payload.story.length > 0)
-          fetch(`/api/story/${data.payload.story[0]}`, {
-            method: "GET"
+    const fetchData = async () => {
+      const response = await fetch(`/api/user/${user._id}`, {
+        method: "GET"
+      })
+      const data = await response.json()
+      setDate(data.payload.createdOn)
+      if (data.payload.story.length > 0)
+        fetch(`/api/story/${data.payload.story[0]}`, {
+          method: "GET"
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            setStory1(data.story);
+            setTitle1(data.title);
           })
-            .then((response) => response.json())
-            .then((data) => {
-              setStory1(data.story);
-              setTitle1(data.title);
-            })
-        else setTitle1("No Story");
-        if (data.payload.story.length > 1)
-          fetch(`/api/story/${data.payload.story[1]}`, {
-            method: "GET"
+      else setTitle1("No Story");
+      if (data.payload.story.length > 1)
+        fetch(`/api/story/${data.payload.story[1]}`, {
+          method: "GET"
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            setStory2(data.story);
+            setTitle2(data.title);
           })
-            .then((response) => response.json())
-            .then((data) => {
-              setStory2(data.story);
-              setTitle2(data.title);
-            })
-            else setTitle2("No Story");
-        if(data.payload.story.length > 2)
+      else setTitle2("No Story");
+      if (data.payload.story.length > 2)
         fetch(`/api/story/${data.payload.story[2]}`, {
           method: "GET"
         })
@@ -81,8 +88,8 @@ export default function UserPage() {
             setStory3(data.story);
             setTitle3(data.title);
           })
-          else setTitle3("No Story");
-        if(data.payload.story.length > 3)
+      else setTitle3("No Story");
+      if (data.payload.story.length > 3)
         fetch(`/api/story/${data.payload.story[3]}`, {
           method: "GET"
         })
@@ -91,8 +98,8 @@ export default function UserPage() {
             setStory4(data.story);
             setTitle4(data.title);
           })
-          else setTitle4("No Story");
-        if(data.payload.story.length > 4)
+      else setTitle4("No Story");
+      if (data.payload.story.length > 4)
         fetch(`/api/story/${data.payload.story[4]}`, {
           method: "GET"
         })
@@ -101,8 +108,8 @@ export default function UserPage() {
             setStory5(data.story);
             setTitle5(data.title);
           })
-          else setTitle5("No Story");
-          if(data.payload.story.length > 5)
+      else setTitle5("No Story");
+      if (data.payload.story.length > 5)
         fetch(`/api/story/${data.payload.story[5]}`, {
           method: "GET"
         })
@@ -111,8 +118,8 @@ export default function UserPage() {
             setStory6(data.story);
             setTitle6(data.title);
           })
-          else setTitle6("No Story");
-          if(data.payload.story.length > 6)
+      else setTitle6("No Story");
+      if (data.payload.story.length > 6)
         fetch(`/api/story/${data.payload.story[6]}`, {
           method: "GET"
         })
@@ -121,8 +128,8 @@ export default function UserPage() {
             setStory7(data.story);
             setTitle7(data.title);
           })
-          else setTitle7("No Story");
-          if(data.payload.story.length > 7)
+      else setTitle7("No Story");
+      if (data.payload.story.length > 7)
         fetch(`/api/story/${data.payload.story[7]}`, {
           method: "GET"
         })
@@ -131,8 +138,8 @@ export default function UserPage() {
             setStory8(data.story);
             setTitle8(data.title);
           })
-          else setTitle8("No Story");
-          if(data.payload.story.length > 8)
+      else setTitle8("No Story");
+      if (data.payload.story.length > 8)
         fetch(`/api/story/${data.payload.story[8]}`, {
           method: "GET"
         })
@@ -141,8 +148,8 @@ export default function UserPage() {
             setStory9(data.story);
             setTitle9(data.title);
           })
-          else setTitle9("No Story");
-          if(data.payload.story.length > 9)
+      else setTitle9("No Story");
+      if (data.payload.story.length > 9)
         fetch(`/api/story/${data.payload.story[9]}`, {
           method: "GET"
         })
@@ -151,8 +158,9 @@ export default function UserPage() {
             setStory10(data.story);
             setTitle10(data.title);
           })
-          else setTitle10("No Story");
-      })
+      else setTitle10("No Story");
+    }
+    fetchData()
       .catch((error) => console.log(error));
   }, []);
 
