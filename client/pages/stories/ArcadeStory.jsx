@@ -27,7 +27,7 @@ export default function ArcadeStory() {
   return (
     <>
       <div>
-        <h1 className='storyHeader'>Madlibs!</h1>
+        <h1 className='storyHeader'>AT THE ARCADE</h1>
         <p className='createStoryText'>Create a story:</p>
         <div className='inputContainer'>
           <input className='inputBox' type="text" name="noun1" placeholder="Enter a plural noun" value={userData.noun1} onChange={handleInputChange} />

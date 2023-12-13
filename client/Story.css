@@ -26,7 +26,7 @@ h1 {
 }
 
 .storyHeader {
-  color: purple;
+  color: #6f42c1;
   text-align: center;
 }
 
@@ -52,4 +52,20 @@ h1 {
   background-color: black;
   display: flex;
   justify-content: start;
+}
+
+.storyCreateTitle{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#storyCreateBtn{
+  background-color: #6f42c1;
+  border-color: black;
+  font-size: 13px;
+}
+
+.storyCreateHeader{
+  border-bottom: #6f42c1 solid 2px;
+  padding-bottom: 20px;
 }

@@ -29,7 +29,7 @@ export default function ParkStory() {
   return (
     <>
       <div>
-        <h1 className='storyHeader'>Madlibs!</h1>
+        <h1 className='storyHeader'>THE FUN PARK</h1>
         <p className='createStoryText'>Create a story:</p>
         <div className='inputContainer'>
           <input className='inputBox' type="text" name="adj1" placeholder="Enter an adjective" value={userData.adj1} onChange={handleInputChange} />
