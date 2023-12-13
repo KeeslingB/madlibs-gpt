@@ -12,7 +12,7 @@ body {
 #wrapper {
   width: 1280px;
   margin: 0 auto;
-  text-align: center;
+
 }
 
 
@@ -33,15 +33,18 @@ body {
   animation-duration: 2s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
-  transform: translate(0px, 0px);
+  transform: translate(15px, 0px);
 }
 
-.blob {
-  position: relative;
-  top: 50%;
-  left: 100%;
-  transform: translate(-1600px, -170px);
 
+#morphing {
+  position: center;
+  width: 50%;
+  background-size: cover;
+  height: 0;
+  padding: 0;
+  /* reset */
+  padding-bottom: calc(100% * 3 / 4);
 }
 
 @keyframes animate {
@@ -58,12 +61,12 @@ body {
 
 .stories {
   position: center;
-  transform: translate(0px, -1200px);
+  transform: translate(0px, 0px);
 }
 
 .box {
   position: static;
-  transform: translate(0px, -1200px);
+  transform: translate(0px, 0px);
   box-shadow: 0 0 10px 5px #2685b8,
     0 0 20px 7px #ebecca,
     0 0 25px 20px #8a2be2,
@@ -72,7 +75,7 @@ body {
 
 .box-2 {
   position: static;
-  transform: translate(0px, -1100px);
+  transform: translate(0px, 0px);
   box-shadow: 0 0 10px 2px #2685b8,
     0 0 20px 7px #ebecca,
     0 0 25px 20px #8a2be2,

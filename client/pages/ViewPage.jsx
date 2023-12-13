@@ -9,25 +9,25 @@ import { Commenting } from '../components/'
 
 
 export default function ViewPage() {
-
+  const [storyId, setStoryId]= useState(null);
   const [story1, setStory1] = useState(null);
   const [title1, setTitle1] = useState(null);
 
-  const storyId = "657893add9e0d46dce9a3c9a"
-
   useEffect(() => {
-    fetch(`/api/story/${storyId}`, {
+    const storyid = window.location.href.split("?")[1].split("=")[1]
+   setStoryId(storyid);
+    fetch(`/api/story/${storyid}`, {
       method: "GET"
     })
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
         setTitle1(data.title)
-        setStory1(data.story);;
+        setStory1(data.story);
 
       })
-      .catch((error) => console.log(error));
-  }, []);
+  },[window.location])
+
 
   return (
     <>
@@ -47,7 +47,7 @@ export default function ViewPage() {
                   {story1}
                 </Card.Text>
               </Card.Body>
-              < Commenting props='${storyId}' />
+              < Commenting storyId={storyId} />
             </Card>
             {/* <form>
               <textarea defaultValue="enter a comment!" style={{ width: '30rem', height: '10rem', margin: '.5rem', alignItems: "center" }}></textarea>
