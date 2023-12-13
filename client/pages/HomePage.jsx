@@ -50,6 +50,7 @@ export default function HomePage() {
             setStory1(data.story);
             setTitle1(data.title);
           })
+
         fetch(`/api/story/${data[1]._id}`, {
           method: "GET"
         })
@@ -58,6 +59,7 @@ export default function HomePage() {
             setStory2(data.story);
             setTitle2(data.title);
           })
+
         fetch(`/api/story/${data[2]._id}`, {
           method: "GET"
         })
@@ -66,6 +68,7 @@ export default function HomePage() {
             setStory3(data.story);
             setTitle3(data.title);
           })
+
         fetch(`/api/story/${data[3]._id}`, {
           method: "GET"
         })
@@ -74,6 +77,7 @@ export default function HomePage() {
             setStory4(data.story);
             setTitle4(data.title);
           })
+
         fetch(`/api/story/${data[4]._id}`, {
           method: "GET"
         })
@@ -82,6 +86,7 @@ export default function HomePage() {
             setStory5(data.story);
             setTitle5(data.title);
           })
+
         fetch(`/api/story/${data[5]._id}`, {
           method: "GET"
         })
@@ -90,6 +95,7 @@ export default function HomePage() {
             setStory6(data.story);
             setTitle6(data.title);
           })
+
         fetch(`/api/story/${data[6]._id}`, {
           method: "GET"
         })
@@ -98,6 +104,7 @@ export default function HomePage() {
             setStory7(data.story);
             setTitle7(data.title);
           })
+          
         fetch(`/api/story/${data[7]._id}`, {
           method: "GET"
         })
