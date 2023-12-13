@@ -6,10 +6,10 @@ require("dotenv").config();
 const Model = User; 
 
   async function verifyUser(req){
-    console.log("here")
+    // console.log("here")
 
     const cookie = req.cookies["auth-cookie"]
-    console.log(cookie)
+    // console.log(cookie)
     if( !cookie ) return false 
 
     const isVerified = jwt.verify(cookie, process.env.JWT_SECRET)

@@ -41,7 +41,6 @@ export default function HomePage() {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data[0]._id)
 
         fetch(`/api/story/${data[0]._id}`, {
           method: "GET"
@@ -51,6 +50,7 @@ export default function HomePage() {
             setStory1(data.story);
             setTitle1(data.title);
           })
+
         fetch(`/api/story/${data[1]._id}`, {
           method: "GET"
         })
@@ -59,6 +59,7 @@ export default function HomePage() {
             setStory2(data.story);
             setTitle2(data.title);
           })
+
         fetch(`/api/story/${data[2]._id}`, {
           method: "GET"
         })
@@ -67,6 +68,7 @@ export default function HomePage() {
             setStory3(data.story);
             setTitle3(data.title);
           })
+
         fetch(`/api/story/${data[3]._id}`, {
           method: "GET"
         })
@@ -75,6 +77,7 @@ export default function HomePage() {
             setStory4(data.story);
             setTitle4(data.title);
           })
+
         fetch(`/api/story/${data[4]._id}`, {
           method: "GET"
         })
@@ -83,6 +86,7 @@ export default function HomePage() {
             setStory5(data.story);
             setTitle5(data.title);
           })
+
         fetch(`/api/story/${data[5]._id}`, {
           method: "GET"
         })
@@ -91,6 +95,7 @@ export default function HomePage() {
             setStory6(data.story);
             setTitle6(data.title);
           })
+
         fetch(`/api/story/${data[6]._id}`, {
           method: "GET"
         })
@@ -99,6 +104,7 @@ export default function HomePage() {
             setStory7(data.story);
             setTitle7(data.title);
           })
+          
         fetch(`/api/story/${data[7]._id}`, {
           method: "GET"
         })
@@ -111,16 +117,6 @@ export default function HomePage() {
       .catch((error) => console.log(error));
   }, []);
 
-  useEffect(() => {
-    fetch(`/api/story`, {
-      method: "GET"
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
 
   return (
     <>
@@ -135,7 +131,7 @@ export default function HomePage() {
             <Card.Text>
               {story1}
             </Card.Text>
-            <Button variant="primary" style={{ bottom: '0' }}>View Story</Button>
+            <Button variant="primary" href="/viewstory">View Story</Button>
           </Card.Body>
         </Card>
         <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
@@ -144,7 +140,7 @@ export default function HomePage() {
             <Card.Text>
               {story2}
             </Card.Text>
-            <Button variant="primary" style={{ bottom: '0' }}>View Story</Button>
+            <Button variant="primary" href="/viewstory">View Story</Button>
           </Card.Body>
         </Card>
         <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
@@ -153,7 +149,7 @@ export default function HomePage() {
             <Card.Text>
               {story3}
             </Card.Text>
-            <Button variant="primary">View Story</Button>
+            <Button variant="primary" href="/viewstory">View Story</Button>
           </Card.Body>
         </Card>
         <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
@@ -162,7 +158,7 @@ export default function HomePage() {
             <Card.Text>
               {story4}
             </Card.Text>
-            <Button variant="primary">View Story</Button>
+            <Button variant="primary" href="/viewstory">View Story</Button>
           </Card.Body>
         </Card>
       </div>
@@ -174,7 +170,7 @@ export default function HomePage() {
             <Card.Text>
               {story5}
             </Card.Text>
-            <Button variant="primary" style={{ bottom: '0' }}>View Story</Button>
+            <Button variant="primary" href="/viewstory">View Story</Button>
           </Card.Body>
         </Card>
         <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
@@ -183,7 +179,7 @@ export default function HomePage() {
             <Card.Text>
               {story6}
             </Card.Text>
-            <Button variant="primary" style={{ bottom: '0' }}>View Story</Button>
+            <Button variant="primary" href="/viewstory">View Story</Button>
           </Card.Body>
         </Card>
         <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
@@ -192,7 +188,7 @@ export default function HomePage() {
             <Card.Text>
               {story7}
             </Card.Text>
-            <Button variant="primary">View Story</Button>
+            <Button variant="primary" href="/viewstory">View Story</Button>
           </Card.Body>
         </Card>
         <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
@@ -201,7 +197,7 @@ export default function HomePage() {
             <Card.Text>
               {story8}
             </Card.Text>
-            <Button variant="primary">View Story</Button>
+            <Button variant="primary" href="/viewstory">View Story</Button>
           </Card.Body>
         </Card>
       </div>
