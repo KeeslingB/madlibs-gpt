@@ -1,3 +1,8 @@
+body {
+  height: 50vh;
+  background-size: cover;
+}
+
 :root {
   background-color: #030303;
 
@@ -12,6 +17,35 @@ div#root {
   font-family: 'Bungee', sans-serif;
   color: #6f42c1;
   text-align: center;
+
+}
+
+.sketch {
+  top: 50%;
+  left: 50%;
+  animation-name: animate;
+  animation-duration: 5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  transform: translate(0%, 30%);
+}
+
+.blob {
+  top: 50%;
+  left: 50%;
+  transform: translate(35%, 10%);
+}
+
+@keyframes animate {
+  0% {
+    filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 10px #6f42c1) drop-shadow(0px 0px 30px #51299c) drop-shadow(0px 0px 40px #2d1064);
+
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 6px #fff) drop-shadow(0px 0px 15px #6f42c1) drop-shadow(0px 0px 40px #51299c) drop-shadow(0px 0px 50px #2d1064);
+
+  }
 }
 
 .h1,
@@ -23,4 +57,10 @@ h1 {
 #animation-title path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 0;
+}
+
+
+
+.p {
+  position: absolute;
 }

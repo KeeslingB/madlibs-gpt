@@ -1,5 +1,6 @@
 import React from "react";
 import HomeAnime from "../components/HomeAnime";
+import HomeBody from "../components/HomeBody";
 // importing css
 import "../Homepage.css";
 import Button from 'react-bootstrap/Button';
@@ -112,6 +113,10 @@ export default function HomePage() {
 
   return (
     <>
+<<<<<<< HEAD
+      <HomeAnime></HomeAnime>
+      <HomeBody></HomeBody>
+=======
       <HomeAnime></HomeAnime><br></br><br></br>
       <div>
         <h1>Stories</h1><br></br>
@@ -194,6 +199,7 @@ export default function HomePage() {
         </Card>
       </div>
 
+>>>>>>> master
     </>
   )
 }

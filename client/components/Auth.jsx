@@ -5,12 +5,16 @@ import useAnimate from "./useAnimate";
 
 export default function Auth({ usage = "login"}) {
 
+<<<<<<< HEAD
+export default function Auth({ usage = "signup" }) {
+=======
   const animateProgress = anime({
     targets: `#${usage}-progress`,
     value: 100,
     easing: 'linear',
     autoplay: false
   });
+>>>>>>> master
 
   const appCtx = useAppCtx()
   const { play, ProgressBar } = useAnimate(animateProgress)
@@ -21,7 +25,12 @@ export default function Auth({ usage = "login"}) {
     setUserData({ ...userData, [e.target.name]: e.target.value })
   }
 
+<<<<<<< HEAD
+  async function handleFormSubmit(e) {
+    e.preventDefault()
+=======
   async function submitForm(){
+>>>>>>> master
     const apiPath = (usage === "signup") ? "/" : "/auth"
     const finalPath = `/api/user${apiPath}`
 
@@ -34,12 +43,20 @@ export default function Auth({ usage = "login"}) {
         }
       })
       const response = await query.json()
+<<<<<<< HEAD
+      console.log(response)
+=======
       // console.log(response)
+>>>>>>> master
       if (response.result === "success") {
         window.location.href = "/"
       }
     } catch (err) {
+<<<<<<< HEAD
+      console.log(err.message)
+=======
       // console.log(err.message)
+>>>>>>> master
     }
   }
 
