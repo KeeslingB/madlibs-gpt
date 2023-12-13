@@ -18,7 +18,8 @@ async function getAllComments(req, res) {
 
 async function getCommentsByStory(req, res) {
     try {
-        const storyComments = await Comment.findAll({ story: req.params.story });
+        console.log("finding this story's comments")
+        const storyComments = await Comment.find({ path: req.params.story });
 
         if (!storyComments) {
             return res.status(404).json({ message: 'No comments found' })
@@ -34,7 +35,8 @@ async function getCommentsByStory(req, res) {
 
 async function getSingleComment(req, res) {
     try {
-        const oneComment = await Comment.findOne({ _id: req.params.id });
+        console.log("Get one comment.")
+        const oneComment = await Comment.findById({ _id: req.params.id });
         if (!oneComment) {
             return res.status(404).json({ message: 'No such comment' })
         }
