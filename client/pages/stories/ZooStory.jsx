@@ -50,7 +50,9 @@ export default function ZooStory() {
         <button className='inputBox' onClick={generateMadlibs}>Generate Story</button>
         </div>
         <p className='storyText'>{story}</p>
+        <button>Save Story</button>
       </div>
+
     </>
   )
 }
