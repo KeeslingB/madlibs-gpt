@@ -47,7 +47,7 @@ export default function ViewPage() {
                   {story1}
                 </Card.Text>
               </Card.Body>
-              < Commenting props='${storyId}' />
+              < Commenting props={storyId} />
             </Card>
             {/* <form>
               <textarea defaultValue="enter a comment!" style={{ width: '30rem', height: '10rem', margin: '.5rem', alignItems: "center" }}></textarea>
