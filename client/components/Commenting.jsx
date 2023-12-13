@@ -3,37 +3,44 @@ import { useEffect, useState } from "react"
 
 
 
-export default function Commenting(props){
+export default function Commenting(props) {
 
     const [commentData, setCommentData] = useState({ story: props.storyId, commenterName: "", commentText: "", });
 
     function handleInputChange(e) {
-        setCommentData({...commentData, [e.target.name]: e.target.value })
+        setCommentData({ ...commentData, [e.target.name]: e.target.value })
     };
 
     // useEffect for getting storyid? 
-    // async function setStory(){
-    //     // something await fetch("api/story/storyid").
-    //     const whichStory = await fetch("/api/story/${story._id}")
-    //     setCommentData(story, whichStory)
-    // }
 
-    async function sendForm(){
+    async function sendForm() {
         //if i can set the story id through props this should be simpler.
+        const commentOn = `api/comment/${props.storyId}`
 
         try {
             console.log("sending comment...")
-
+            const query = await fetch(commentOn, {
+                method: "POST",
+                body: JSON.stringify(commentData),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            const response = await query.json()
+            return response
         } catch (err) {
-            console.log(err.message)
+            return console.log(err.message)
         }
     }
 
-    return
+    return(
     <>
-    <form>
+        <form onSubmit={sendForm}>
+            <input type="text" placeholder="Enter your name" name="commenterName" value="commenterName" onChange={handleInputChange} />
+            <input type="text" placeholder="Write your comment" name="commentText" value="commentText" />
+            <button>send comment</button>
 
-    </form>
-    </>
+        </form>
+    </>)
 
 }
