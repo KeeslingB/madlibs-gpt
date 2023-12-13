@@ -33,7 +33,8 @@ BootCampSpot and its available resources were a great help with all the addition
 
 ## Project Examples
 
- ![](./assets/Untitled%20video%20-%20Made%20with%20Clipchamp.gif)
+ ![](./assets/Untitled%20video%20-%20Made%20with%20Clipchamp.gif).
+
 
 -----------------------------------------------------------
 - [Project Deployed Here!](https://madlibsgpt-47c520ae93df.herokuapp.com/)  
