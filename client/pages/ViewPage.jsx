@@ -13,6 +13,7 @@ export default function ViewPage() {
   const [story1, setStory1] = useState(null);
   const [title1, setTitle1] = useState(null);
 
+<<<<<<< HEAD
   const storyId = "657893add9e0d46dce9a3c9a"
 
 
@@ -21,19 +22,22 @@ export default function ViewPage() {
     console.log(storyid)
   },[window.location])
 
+=======
+>>>>>>> master
   useEffect(() => {
-    fetch(`/api/story/${storyId}`, {
+    const storyid = window.location.href.split("?")[1].split("=")[1]
+    fetch(`/api/story/${storyid}`, {
       method: "GET"
     })
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
         setTitle1(data.title)
-        setStory1(data.story);;
+        setStory1(data.story);
 
       })
-      .catch((error) => console.log(error));
-  }, []);
+  },[window.location])
+
 
   return (
     <>

@@ -1,6 +1,5 @@
 import React from "react";
-import HomeAnime from "../components/HomeAnime";
-import Blob from "../components/Blob";
+import { Footer, Blob, HomeAnime } from "../components";
 // importing css
 import "../Homepage.css";
 import Button from 'react-bootstrap/Button';
@@ -121,7 +120,7 @@ export default function HomePage() {
   return (
     <>
       <div id="wrapper">
-        <HomeAnime></HomeAnime><Blob></Blob><br></br><br></br>
+        <HomeAnime></HomeAnime><br></br><br></br>
         <div>
           <h1 className="stories">Stories</h1><br></br>
         </div>
@@ -132,7 +131,7 @@ export default function HomePage() {
               <Card.Text>
                 {story1}
               </Card.Text>
-              <Button variant="primary" href="/viewstory">View Story</Button>
+              <Button variant="primary" href="/viewstory?storyid=657a12e4cfb5dbd724aca080">View Story</Button>
             </Card.Body>
           </Card>
           <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
@@ -156,7 +155,7 @@ export default function HomePage() {
         </div>
         <br></br>
         <div className="box-2" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "#2d1064" }}>
-        <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
+          <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
             <Card.Body>
               <Card.Title>{title4}</Card.Title><br></br>
               <Card.Text>
@@ -185,6 +184,7 @@ export default function HomePage() {
           </Card>
         </div>
       </div>
+      <Footer></Footer>
 
     </>
   )

@@ -10,11 +10,12 @@ export const useAppCtx = () => useContext(AppContext)
 export default function AppProvider(props){
 
   const [ user, setUser ] = useState({})
+  const allowedPaths = ["/", "/auth", "/create-page", "/viewstory"] 
 
   async function verifyUser(){
     const cookie = Cookie.get("auth-cookie")
 
-    if(!cookie && window.location.pathname !== "/" && !window.location.pathname.includes("/auth")){
+    if( !allowedPaths.includes(window.location.pathname)){
       window.location.href = "/auth"
     }
     
@@ -25,7 +26,7 @@ export default function AppProvider(props){
         setUser(response.payload)
       }
     } catch(err){
-      if( window.location.pathname !== "" && !window.location.pathname.includes("/auth")) {
+      if( !allowedPaths.includes(window.location.pathname)) {
         window.location.href = "/auth"
       }
     }
