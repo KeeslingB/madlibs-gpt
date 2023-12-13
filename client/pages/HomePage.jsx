@@ -124,9 +124,15 @@ export default function HomePage() {
 
   return (
     <>
+<<<<<<< HEAD
       <HomeAnime></HomeAnime><Blob></Blob>
       <div >
         <h1 className="stories">Stories</h1><br></br>
+=======
+      <HomeAnime></HomeAnime><br></br><br></br>
+      <div>
+        <h1>Stories</h1><br></br>
+>>>>>>> master
       </div>
       <div className="box" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "purple", width: '100%' }}>
         <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
