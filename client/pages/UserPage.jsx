@@ -27,7 +27,7 @@ export default function UserPage() {
 
   const [story6, setStory6] = useState(null);
   const [title6, setTitle6] = useState(null);
-  
+
   const [story7, setStory7] = useState(null);
   const [title7, setTitle7] = useState(null);
 
@@ -42,7 +42,7 @@ export default function UserPage() {
 
   const userId = "6578973dd9e0d46dce9a3d15"
 
-  
+
 
   useEffect(() => {
     fetch(`/api/user/${userId}`, {
@@ -70,87 +70,87 @@ export default function UserPage() {
               setStory2(data.story);
               setTitle2(data.title);
             })
-            else setTitle2("No Story");
-        if(data.payload.story.length > 2)
-        fetch(`/api/story/${data.payload.story[2]}`, {
-          method: "GET"
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            setStory3(data.story);
-            setTitle3(data.title);
+        else setTitle2("No Story");
+        if (data.payload.story.length > 2)
+          fetch(`/api/story/${data.payload.story[2]}`, {
+            method: "GET"
           })
-          else setTitle3("No Story");
-        if(data.payload.story.length > 3)
-        fetch(`/api/story/${data.payload.story[3]}`, {
-          method: "GET"
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            setStory4(data.story);
-            setTitle4(data.title);
+            .then((response) => response.json())
+            .then((data) => {
+              setStory3(data.story);
+              setTitle3(data.title);
+            })
+        else setTitle3("No Story");
+        if (data.payload.story.length > 3)
+          fetch(`/api/story/${data.payload.story[3]}`, {
+            method: "GET"
           })
-          else setTitle4("No Story");
-        if(data.payload.story.length > 4)
-        fetch(`/api/story/${data.payload.story[4]}`, {
-          method: "GET"
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            setStory5(data.story);
-            setTitle5(data.title);
+            .then((response) => response.json())
+            .then((data) => {
+              setStory4(data.story);
+              setTitle4(data.title);
+            })
+        else setTitle4("No Story");
+        if (data.payload.story.length > 4)
+          fetch(`/api/story/${data.payload.story[4]}`, {
+            method: "GET"
           })
-          else setTitle5("No Story");
-          if(data.payload.story.length > 5)
-        fetch(`/api/story/${data.payload.story[5]}`, {
-          method: "GET"
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            setStory6(data.story);
-            setTitle6(data.title);
+            .then((response) => response.json())
+            .then((data) => {
+              setStory5(data.story);
+              setTitle5(data.title);
+            })
+        else setTitle5("No Story");
+        if (data.payload.story.length > 5)
+          fetch(`/api/story/${data.payload.story[5]}`, {
+            method: "GET"
           })
-          else setTitle6("No Story");
-          if(data.payload.story.length > 6)
-        fetch(`/api/story/${data.payload.story[6]}`, {
-          method: "GET"
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            setStory7(data.story);
-            setTitle7(data.title);
+            .then((response) => response.json())
+            .then((data) => {
+              setStory6(data.story);
+              setTitle6(data.title);
+            })
+        else setTitle6("No Story");
+        if (data.payload.story.length > 6)
+          fetch(`/api/story/${data.payload.story[6]}`, {
+            method: "GET"
           })
-          else setTitle7("No Story");
-          if(data.payload.story.length > 7)
-        fetch(`/api/story/${data.payload.story[7]}`, {
-          method: "GET"
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            setStory8(data.story);
-            setTitle8(data.title);
+            .then((response) => response.json())
+            .then((data) => {
+              setStory7(data.story);
+              setTitle7(data.title);
+            })
+        else setTitle7("No Story");
+        if (data.payload.story.length > 7)
+          fetch(`/api/story/${data.payload.story[7]}`, {
+            method: "GET"
           })
-          else setTitle8("No Story");
-          if(data.payload.story.length > 8)
-        fetch(`/api/story/${data.payload.story[8]}`, {
-          method: "GET"
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            setStory9(data.story);
-            setTitle9(data.title);
+            .then((response) => response.json())
+            .then((data) => {
+              setStory8(data.story);
+              setTitle8(data.title);
+            })
+        else setTitle8("No Story");
+        if (data.payload.story.length > 8)
+          fetch(`/api/story/${data.payload.story[8]}`, {
+            method: "GET"
           })
-          else setTitle9("No Story");
-          if(data.payload.story.length > 9)
-        fetch(`/api/story/${data.payload.story[9]}`, {
-          method: "GET"
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            setStory10(data.story);
-            setTitle10(data.title);
+            .then((response) => response.json())
+            .then((data) => {
+              setStory9(data.story);
+              setTitle9(data.title);
+            })
+        else setTitle9("No Story");
+        if (data.payload.story.length > 9)
+          fetch(`/api/story/${data.payload.story[9]}`, {
+            method: "GET"
           })
-          else setTitle10("No Story");
+            .then((response) => response.json())
+            .then((data) => {
+              setStory10(data.story);
+              setTitle10(data.title);
+            })
+        else setTitle10("No Story");
       })
       .catch((error) => console.log(error));
   }, []);
