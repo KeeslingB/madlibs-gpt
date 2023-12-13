@@ -7,14 +7,15 @@ export default function Commenting(props) {
 
     const [commentData, setCommentData] = useState({ story: props, commenterName: "", commentText: "", });
 
-    function handleInputChange(e) {
-        setCommentData({ ...commentData, [e.target.name]: e.target.value })
-    };
+    const handleInputChange = ({ target: { name, value } }) => {
+        setCommentData({ ...commentData, [name]: value });
+    }
 
     // useEffect for getting storyid? 
 
-    async function sendForm() {
+    async function sendForm(e) {
         //if i can set the story id through props this should be simpler.
+        e.preventDefault();
         const commentOn = `api/comment/${props}`
 
         try {
@@ -33,14 +34,14 @@ export default function Commenting(props) {
         }
     }
 
-    return(
-    <>
-        <form onSubmit={sendForm}>
-            <input type="text" placeholder="Enter your name" name="commenterName" value="commenterName" onChange={handleInputChange} />
-            <input type="text" placeholder="Write your comment" name="commentText" value="commentText" onChange={handleInputChange} />
-            <button>send comment</button>
+    return (
+        <>
+            <form onSubmit={sendForm}>
+                <input type="text" placeholder="Enter your name" name="commenterName" value={commentData.commenterName} onChange={handleInputChange} />
+                <input type="text" placeholder="Write your comment" name="commentText" value={commentData.commentText} onChange={handleInputChange} />
+                <button>send comment</button>
 
-        </form>
-    </>)
+            </form>
+        </>)
 
 }
