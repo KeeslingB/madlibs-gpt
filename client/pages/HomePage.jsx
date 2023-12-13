@@ -113,11 +113,8 @@ export default function HomePage() {
 
   return (
     <>
-<<<<<<< HEAD
-      <HomeAnime></HomeAnime>
-      <HomeBody></HomeBody>
-=======
       <HomeAnime></HomeAnime><br></br><br></br>
+      <HomeBody></HomeBody>
       <div>
         <h1>Stories</h1><br></br>
       </div>
@@ -199,7 +196,6 @@ export default function HomePage() {
         </Card>
       </div>
 
->>>>>>> master
     </>
   )
 }
