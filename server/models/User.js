@@ -18,8 +18,8 @@ const userSchema = new Schema({
     required: true
   },
   createdOn: {
-    type: Date,
-    default: Date.now,
+    type: String,
+    default: Date('MM/DD/YYYY'),
   },
   story: [
     {
