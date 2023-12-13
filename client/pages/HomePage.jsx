@@ -1,6 +1,6 @@
 import React from "react";
 import HomeAnime from "../components/HomeAnime";
-import HomeBody from "../components/HomeBody";
+import Blob from "../components/Blob";
 // importing css
 import "../Homepage.css";
 import Button from 'react-bootstrap/Button';
@@ -120,14 +120,13 @@ export default function HomePage() {
 
   return (
     <>
-      <HomeAnime></HomeAnime><br></br><br></br>
-      <HomeBody></HomeBody>
+      <HomeAnime></HomeAnime><Blob></Blob><br></br><br></br>
       <div>
-        <h1>Stories</h1><br></br>
+        <h1 className="stories">Stories</h1><br></br>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "purple", width: '100%' }}>
+      <div className="box" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "purple", width: '100%' }}>
         <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
-          <Card.Body>
+          <Card.Body >
             <Card.Title>{title1}</Card.Title><br></br>
             <Card.Text>
               {story1}
@@ -164,7 +163,7 @@ export default function HomePage() {
         </Card>
       </div>
       <br></br>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "purple" }}>
+      <div className="box-2" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 'wrap', backgroundColor: "purple" }}>
         <Card style={{ width: '20rem', height: '35rem', margin: '.5rem' }}>
           <Card.Body>
             <Card.Title>{title5}</Card.Title><br></br>
