@@ -3,10 +3,10 @@ import { useAppCtx } from "../utils/AppProvider"
 import anime from 'animejs/lib/anime.es.js';
 import useAnimate from "./useAnimate";
 
-export default function Auth({ usage = "login"}) {
+export default function Signup({ usage = "login"}) {
 
   const animateProgress = anime({
-    targets: `#${usage}-progress`,
+    targets: 'progress',
     value: 100,
     easing: 'linear',
     autoplay: false
@@ -70,7 +70,7 @@ export default function Auth({ usage = "login"}) {
               <input type="password" name="password" value={userData.password} onChange={handleInputChange} />
             </div>
           </div>
-          <progress id={`${usage}-progress`} value="0" max="100">
+          <progress value="0" max="100">
             <div  className="Progress-bar" role="presentation">
             </div>  
           </progress>
@@ -83,5 +83,3 @@ export default function Auth({ usage = "login"}) {
     </div>
   )
 }
-
-
