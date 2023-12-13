@@ -21,11 +21,7 @@ export default function Auth({ usage = "login" }) {
     setUserData({ ...userData, [e.target.name]: e.target.value })
   }
 
-<<<<<<< HEAD
   async function submitForm() {
-=======
-  async function submitForm(){
->>>>>>> master
     const apiPath = (usage === "signup") ? "/" : "/auth"
     const finalPath = `/api/user${apiPath}`
 
