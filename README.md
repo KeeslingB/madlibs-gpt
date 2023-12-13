@@ -1,4 +1,4 @@
-# MadLibs GPT (placeholder name)
+ ![](./assets/madlibs-banner.png)
 
 ## Table of Contents
 
@@ -11,9 +11,10 @@
 
 
 ## Description
-
+Create your own madlibs and save them with our App!
 
 ## How to use
+instructions on how to use.
 
 
 ## Credits
@@ -22,27 +23,29 @@ animejs documentation was very robust and had lots of resources / examples to go
 - [Animejs](https://animejs.com/documentation/)
 
 
- - [Medium Blog Post](https://blog.bitsrc.io/interacting-with-openai-in-node-js-and-express-647e771fc4ad) : Really helped with the starting logic and understanding of interacting with our openai api in Node.js and Express.
+CodePen was very useful in finding anmations and how to go about implementing them into our very own project.
+- [CodePen](https://codepen.io/)
+
+
+BootCampSpot and its available resources were a great help with all the additional links provided throughout the cohort to various documents.
+- [BootCampSpot](https://idp.bootcampspot.com/ui/?requestId=d0755c83-372b-45e3-ba4d-460f1c03c171)
 
 
 ## Project Examples
 
+ ![](./assets/Untitled%20video%20-%20Made%20with%20Clipchamp.gif)
 
+-----------------------------------------------------------
+- [Project Deployed Here!](https://madlibsgpt-47c520ae93df.herokuapp.com/)  
+- [Project Repo Here!](https://github.com/KeeslingB/madlibs-gpt)
 
 ## Team
 ### GitHub:
-
 - [Joe Lipovetz](https://github.com/jlipovetz)
 - [Victor Montelongo](https://github.com/VictorMontelongo)
 - [Ben Pavlis](https://github.com/bpavlis)
 - [Brendan Keesling](https://github.com/KeeslingB)
 - [Molly Salzberger](https://github.com/mollydotwhat)
------------------------------------------------------------
-
-
-- [Project Deployed Here!](https://madlibsgpt-47c520ae93df.herokuapp.com/)  placeholder url will need to be updated after final url name?
-
-- [Project Repo Here!](https://github.com/KeeslingB/madlibs-gpt)
 
 
 ## License
