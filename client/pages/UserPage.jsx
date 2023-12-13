@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 // import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
 // import Parse from 'parse/react-native';
-import Parse from 'parse/react-native';
 
 
 
