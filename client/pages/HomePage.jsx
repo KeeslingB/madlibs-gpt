@@ -150,7 +150,7 @@ export default function HomePage() {
               <Card.Text>
                 {story3}
               </Card.Text>
-              <Button variant="primary" href="/viewstory">View Story</Button>
+              <Button variant="primary" href="/viewstory?storyid=657893add9e0d46dce9a3c9a">View Story</Button>
             </Card.Body>
           </Card>
         </div>

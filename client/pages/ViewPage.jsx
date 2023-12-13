@@ -15,6 +15,12 @@ export default function ViewPage() {
 
   const storyId = "657893add9e0d46dce9a3c9a"
 
+
+  useEffect(() => {
+    const storyid = window.location.href.split("?")[1].split("=")[1]
+    console.log(storyid)
+  },[window.location])
+
   useEffect(() => {
     fetch(`/api/story/${storyId}`, {
       method: "GET"
