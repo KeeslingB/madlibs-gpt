@@ -37,7 +37,7 @@ export default function Commenting(props) {
     <>
         <form onSubmit={sendForm}>
             <input type="text" placeholder="Enter your name" name="commenterName" value="commenterName" onChange={handleInputChange} />
-            <input type="text" placeholder="Write your comment" name="commentText" value="commentText" />
+            <input type="text" placeholder="Write your comment" name="commentText" value="commentText" onChange={handleInputChange} />
             <button>send comment</button>
 
         </form>
