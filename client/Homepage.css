@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   background-color: #030303;
   min-width: 980px;
@@ -39,7 +40,8 @@ body {
   position: relative;
   top: 50%;
   left: 100%;
-  transform: translate(10px, -170px);
+  transform: translate(-1600px, -170px);
+
 }
 
 @keyframes animate {
