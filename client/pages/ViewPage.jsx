@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import React, { useState, useEffect } from "react";
 
-import { Commenting } from '../components/Commenting'
+import { Commenting } from '../components/'
 
 
 
