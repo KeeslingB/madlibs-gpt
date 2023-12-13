@@ -3,7 +3,7 @@ import "../Homepage.css"
 import { useEffect } from "react";
 
 
-export default function HomeBody() {
+export default function Blob() {
   useEffect(() => {
 
     window.addEventListener("DOMContentLoaded", anime({
@@ -20,11 +20,11 @@ export default function HomeBody() {
   }, []);
 
   return (
-    <svg class="blob" id="morphing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+    <svg class="blob" id="morphing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 3000">
       <defs>
         <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" style={{ stopColor: "#039EB3", stopOpacity: 1 }} />
-          <stop offset="50%" style={{ stopColor: "#6f42c1", stopOpacity: 1 }} />
+          <stop offset="100%" style={{ stopColor: "#6f42c1", stopOpacity: 1 }} />
         </linearGradient>
       </defs>
       <g transform="translate(300,300)">

@@ -3,18 +3,14 @@ import { useAppCtx } from "../utils/AppProvider"
 import anime from 'animejs/lib/anime.es.js';
 import useAnimate from "./useAnimate";
 
-export default function Auth({ usage = "login"}) {
+export default function Auth({ usage = "login" }) {
 
-<<<<<<< HEAD
-export default function Auth({ usage = "signup" }) {
-=======
   const animateProgress = anime({
     targets: `#${usage}-progress`,
     value: 100,
     easing: 'linear',
     autoplay: false
   });
->>>>>>> master
 
   const appCtx = useAppCtx()
   const { play, ProgressBar } = useAnimate(animateProgress)
@@ -25,12 +21,7 @@ export default function Auth({ usage = "signup" }) {
     setUserData({ ...userData, [e.target.name]: e.target.value })
   }
 
-<<<<<<< HEAD
-  async function handleFormSubmit(e) {
-    e.preventDefault()
-=======
-  async function submitForm(){
->>>>>>> master
+  async function submitForm() {
     const apiPath = (usage === "signup") ? "/" : "/auth"
     const finalPath = `/api/user${apiPath}`
 
@@ -43,20 +34,12 @@ export default function Auth({ usage = "signup" }) {
         }
       })
       const response = await query.json()
-<<<<<<< HEAD
-      console.log(response)
-=======
       // console.log(response)
->>>>>>> master
       if (response.result === "success") {
         window.location.href = "/"
       }
     } catch (err) {
-<<<<<<< HEAD
-      console.log(err.message)
-=======
       // console.log(err.message)
->>>>>>> master
     }
   }
 
@@ -88,14 +71,14 @@ export default function Auth({ usage = "signup" }) {
             </div>
           </div>
           <progress id={`${usage}-progress`} value="0" max="100">
-            <div  className="Progress-bar" role="presentation">
-            </div>  
+            <div className="Progress-bar" role="presentation">
+            </div>
           </progress>
 
-          <div className="button"> 
-             <button  className="mt-2 text">Submit Info</button> 
+          <div className="button">
+            <button className="mt-2 text">Submit Info</button>
           </div>
-        </div> 
+        </div>
       </form>
     </div>
   )
