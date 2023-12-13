@@ -1,7 +1,29 @@
 import React, { useState } from 'react';
 import '../../Story.css'
+import { useAppCtx } from "../../utils/AppProvider"
 
 export default function PizzaStory() {
+
+  function addStory() {
+    fetch(`/api/story/${user._id}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ title: 'The Pizza Chef', story: `${story}`}),
+    });
+  }
+
+  const { user } = useAppCtx()
+
+  function test() {
+    if (!user)
+      return "none"
+  }
+
+  const none = test()
+
+
   const [userData, setUserData] = useState({
     noun1: "",
     adj1: "",
@@ -55,6 +77,7 @@ export default function PizzaStory() {
           <button className='inputBox' onClick={generateMadlibs}>Generate Story</button>
         </div>
         <p className='storyText'>{story}</p>
+        <button onClick={addStory} style={{ display: `${none}` }}>Save Story</button>
       </div>
     </>
   )
