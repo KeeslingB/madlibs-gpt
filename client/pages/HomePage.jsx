@@ -152,7 +152,7 @@ export default function HomePage() {
               <Card.Text>
                 {story2}
               </Card.Text>
-              <Button variant="primary" href="/viewstory">View Story</Button>
+              <Button variant="primary" href={`/viewstory?storyid=${id2}`}>View Story</Button>
             </Card.Body>
           </Card>
           <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
@@ -161,7 +161,7 @@ export default function HomePage() {
               <Card.Text>
                 {story3}
               </Card.Text>
-              <Button variant="primary" href="/viewstory?storyid=657893add9e0d46dce9a3c9a">View Story</Button>
+              <Button variant="primary" href={`/viewstory?storyid=${id3}`}>View Story</Button>
             </Card.Body>
           </Card>
         </div>
@@ -173,7 +173,7 @@ export default function HomePage() {
               <Card.Text>
                 {story4}
               </Card.Text>
-              <Button variant="primary" href="/viewstory">View Story</Button>
+              <Button variant="primary" href={`/viewstory?storyid=${id4}`}>View Story</Button>
             </Card.Body>
           </Card>
           <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
@@ -182,7 +182,7 @@ export default function HomePage() {
               <Card.Text>
                 {story5}
               </Card.Text>
-              <Button variant="primary" href="/viewstory">View Story</Button>
+              <Button variant="primary" href={`/viewstory?storyid=${id5}`}>View Story</Button>
             </Card.Body>
           </Card>
           <Card style={{ width: '50rem', height: '45rem', margin: '.5rem' }}>
@@ -191,7 +191,7 @@ export default function HomePage() {
               <Card.Text>
                 {story6}
               </Card.Text>
-              <Button variant="primary" href="/viewstory">View Story</Button>
+              <Button variant="primary" href={`/viewstory?storyid=${id6}`}>View Story</Button>
             </Card.Body>
           </Card>
         </div>
