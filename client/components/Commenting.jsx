@@ -3,22 +3,23 @@ import { useEffect, useState } from "react"
 
 
 
-export default function Commenting(){
+export default function Commenting(props){
 
-    const [commentData, setCommentData] = useState({ story: "", commenterName: "", commentText: "", });
+    const [commentData, setCommentData] = useState({ story: props.storyId, commenterName: "", commentText: "", });
 
     function handleInputChange(e) {
         setCommentData({...commentData, [e.target.name]: e.target.value })
     };
 
     // useEffect for getting storyid? 
-    async function getStory(){
-        // something await fetch("api/story/storyid").
-    }
+    // async function setStory(){
+    //     // something await fetch("api/story/storyid").
+    //     const whichStory = await fetch("/api/story/${story._id}")
+    //     setCommentData(story, whichStory)
+    // }
 
     async function sendForm(){
-        // do i need to check if the user is signed in here, or will the comment form component be loaded in other components conditionally? or are we allowing anonymous comments all the way?
-        // also, where do i set the story id?
+        //if i can set the story id through props this should be simpler.
 
         try {
             console.log("sending comment...")
