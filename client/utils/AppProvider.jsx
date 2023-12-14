@@ -10,7 +10,7 @@ export const useAppCtx = () => useContext(AppContext)
 export default function AppProvider(props){
 
   const [ user, setUser ] = useState({})
-  const allowedPaths = ["/", "/auth", "/create-page", "/viewstory"] 
+  const allowedPaths = ["/", "/auth", "/create-page", "/viewstory", "/park-story", "/arcade-story", "/pizza-story", "/zoo-story"] 
 
   async function verifyUser(){
     const cookie = Cookie.get("auth-cookie")
