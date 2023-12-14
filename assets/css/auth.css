@@ -1,0 +1,24 @@
+#morphing {
+
+  position: relative;
+  transform: translate(20px, -100px);
+
+}
+
+.signup {
+  position: static;
+  transform: translate(0px, 0px);
+  box-shadow: 0 0 10px 5px #2685b8,
+    0 0 20px 7px #ebecca,
+    0 0 25px 20px #8a2be2,
+    0 0 30px 25px #2d1064;
+}
+
+.login {
+  position: static;
+  transform: translate(0px, 0px);
+  box-shadow: 0 0 10px 5px #2685b8,
+    0 0 20px 7px #ebecca,
+    0 0 25px 20px #8a2be2,
+    0 0 30px 25px #2d1064;
+}

@@ -1,5 +1,5 @@
 import anime from "animejs";
-import "../Homepage.css"
+import "../../assets/css/auth.css"
 import { useEffect } from "react";
 
 
@@ -20,7 +20,7 @@ export default function Blob() {
   }, []);
 
   return (
-    <svg className="blob" id="morphing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" >
+    <svg className="blob" id="morphing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" >
       <defs>
         <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" style={{ stopColor: "#039EB3", stopOpacity: 1 }} />

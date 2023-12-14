@@ -18,6 +18,10 @@ div#root {
 h1 {
   font-size: 100px;
   position: center;
+  box-shadow: 0 0 10px 5px #2685b8,
+    0 0 20px 7px #ebecca,
+    0 0 25px 20px #8a2be2,
+    0 0 30px 25px #2d1064;
 }
 
 #animation-title path {
@@ -28,9 +32,10 @@ h1 {
 .storyHeader {
   color: #6f42c1;
   text-align: center;
+
 }
 
-.createStoryText{
+.createStoryText {
   color: white;
   text-align: center;
 }
@@ -42,11 +47,11 @@ h1 {
   justify-content: center;
 }
 
-.inputBox{
+.inputBox {
   margin: 10px;
 }
 
-.storyText{
+.storyText {
   color: white;
   line-height: 2.0;
   background-color: black;
@@ -54,18 +59,18 @@ h1 {
   justify-content: start;
 }
 
-.storyCreateTitle{
+.storyCreateTitle {
   margin-top: 30px;
   margin-bottom: 10px;
 }
 
-#storyCreateBtn{
+#storyCreateBtn {
   background-color: #6f42c1;
   border-color: black;
   font-size: 13px;
 }
 
-.storyCreateHeader{
+.storyCreateHeader {
   border-bottom: #6f42c1 solid 2px;
   padding-bottom: 20px;
 }

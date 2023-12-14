@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../Story.css'
+import '../../../assets/css/story.css'
 import { useAppCtx } from "../../utils/AppProvider"
 
 export default function ZooStory() {
@@ -10,7 +10,7 @@ export default function ZooStory() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ title: 'A Dat At The Zoo', story: `${story}`}),
+      body: JSON.stringify({ title: 'A Dat At The Zoo', story: `${story}` }),
     });
   }
 
@@ -71,7 +71,7 @@ export default function ZooStory() {
           <button className='inputBox' onClick={generateMadlibs}>Generate Story</button>
         </div>
         <p className='storyText'>{story}</p>
-        <button onClick={addStory}  style={{ display: `${none}` }}>Save Story</button>
+        <button onClick={addStory} style={{ display: `${none}` }}>Save Story</button>
       </div>
 
     </>
