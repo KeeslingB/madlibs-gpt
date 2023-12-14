@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../Story.css'
+import '../../../assets/css/story.css'
 import { useAppCtx } from "../../utils/AppProvider"
 
 export default function ArcadeStory() {
@@ -10,7 +10,7 @@ export default function ArcadeStory() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ title: 'At The Arcade', story: `${story}`}),
+      body: JSON.stringify({ title: 'At The Arcade', story: `${story}` }),
     });
   }
 
