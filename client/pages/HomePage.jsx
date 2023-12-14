@@ -1,7 +1,7 @@
 import React from "react";
-import { Footer, Blob, HomeAnime } from "../components";
+import { Footer, HomeAnime } from "../components";
 // importing css
-import "../Homepage.css";
+import "../../assets/css/homepage.css";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useState, useEffect } from "react";

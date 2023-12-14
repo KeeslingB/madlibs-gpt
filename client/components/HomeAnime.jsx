@@ -1,5 +1,5 @@
 import anime from "animejs";
-import "../Homepage.css"
+import "../../assets/css/homepage.css"
 import { useEffect } from "react";
 
 

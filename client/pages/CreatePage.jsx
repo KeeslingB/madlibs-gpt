@@ -1,5 +1,5 @@
 import Button from 'react-bootstrap/Button';
-import '../Story.css'
+import '../../assets/css/story.css'
 
 
 export default function PrivatePage(props) {
@@ -24,7 +24,7 @@ export default function PrivatePage(props) {
           <h4 className='storyCreateTitle'>THE PIZZA CHEF</h4>
           <Button id="storyCreateBtn" href="/pizza-story">Create</Button>
         </div>
-        
+
       </div>
     </>
   )
