@@ -54,19 +54,19 @@ export default function UserPage() {
 
 
   useEffect(() => {
-    if( user?._id) {
+    if (user?._id) {
       console.log("yes!!!")
       fetchData()
     }
 
-    async function fetchData(){
+    async function fetchData() {
       const response = await fetch(`/api/user/${user._id}`)
       const data = await response.json()
       setDate(data.payload.createdOn)
 
-      if (data.payload.story.length > 0){
+      if (data.payload.story.length > 0) {
         const response2 = await fetch(`/api/story/${data.payload.story[0]}`)
-        const data2 =  await response2.json()
+        const data2 = await response2.json()
         console.log(data2)
         setStory1(data2.story);
         setTitle1(data2.title);
@@ -74,7 +74,7 @@ export default function UserPage() {
         setTitle1("No Story");
       }
 
-      if (data.payload.story.length > 1){
+      if (data.payload.story.length > 1) {
         const response3 = await fetch(`/api/story/${data.payload.story[1]}`)
         const data3 = await response3.json()
         console.log(data3)
@@ -82,9 +82,9 @@ export default function UserPage() {
         setTitle2(data3.title);
       } else {
         setTitle2("No Story");
-      } 
+      }
 
-      if (data.payload.story.length > 2){
+      if (data.payload.story.length > 2) {
         const response4 = await fetch(`/api/story/${data.payload.story[2]}`)
         const data4 = await response4.json()
         setStory3(data4.story);
@@ -93,7 +93,7 @@ export default function UserPage() {
         setTitle3("No Story");
       }
 
-      if (data.payload.story.length > 3){
+      if (data.payload.story.length > 3) {
         const response5 = await fetch(`/api/story/${data.payload.story[3]}`)
         const data5 = await response5.json()
         setStory4(data5.story);
@@ -102,66 +102,66 @@ export default function UserPage() {
         setTitle4("No Story");
       }
 
-      if (data.payload.story.length > 4){
+      if (data.payload.story.length > 4) {
         const response6 = await fetch(`/api/story/${data.payload.story[4]}`)
         const data6 = await response6.json()
         setStory5(data6.story);
         setTitle5(data6.title);
-          }
+      }
       else {
         setTitle5("No Story");
       }
 
-      if (data.payload.story.length > 5){
+      if (data.payload.story.length > 5) {
         const response7 = await fetch(`/api/story/${data.payload.story[5]}`)
         const data7 = await response7.json()
         setStory6(data7.story);
         setTitle6(data7.title);
-          }
+      }
       else {
         setTitle6("No Story");
       }
 
-      if (data.payload.story.length > 6){
+      if (data.payload.story.length > 6) {
         const response8 = await fetch(`/api/story/${data.payload.story[6]}`)
         const data8 = await response8.json()
         setStory7(data8.story);
         setTitle7(data8.title);
-          }
+      }
       else {
         setTitle7("No Story");
       }
 
-      if (data.payload.story.length > 7){
+      if (data.payload.story.length > 7) {
         const response9 = await fetch(`/api/story/${data.payload.story[7]}`)
         const data9 = await response9.json()
         setStory8(data9.story);
         setTitle8(data9.title);
-          }
+      }
       else {
         setTitle8("No Story");
       }
 
-      if (data.payload.story.length > 8){
+      if (data.payload.story.length > 8) {
         const response10 = await fetch(`/api/story/${data.payload.story[8]}`)
         const data10 = await response10.json()
         setStory9(data10.story);
         setTitle9(data10.title);
-          }
+      }
       else {
         setTitle9("No Story");
       }
 
-      if (data.payload.story.length > 9){
+      if (data.payload.story.length > 9) {
         const response11 = await fetch(`/api/story/${data.payload.story[9]}`)
         const data11 = await response11.json()
         setStory10(data11.story);
         setTitle10(data11.title);
-          }
+      }
       else {
         setTitle10("No Story");
       }
-    } 
+    }
   }, [user]);
 
 
@@ -169,6 +169,9 @@ export default function UserPage() {
     <>
       <div style={{ textAlign: 'center' }}>
         <h1 style={{ fontSize: '60px' }}>Welcome Back!</h1>
+      </div><br></br><br></br>
+
+      <div>
         <p>You have been a member since: {date}</p>
       </div><br></br><br></br>
 
