@@ -34,7 +34,7 @@ export default function ViewPage() {
 
       <div>
         <h1 style={{ textAlign: 'center' }}>Story</h1>
-      </div>
+      </div><br></br><br></br><br></br>
 
       <Container>
         <Row>
